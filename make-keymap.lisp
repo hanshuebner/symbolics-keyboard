@@ -129,7 +129,7 @@
     ("="		#x55)
     ("Caps"		#x58)
     ("ShiftR"		#x59)
-    ("'y"		#x52)
+    ("'"		#x52)
     ("Return"		#x5a)
     ("]"		#x5b)
     ("\\"		#x5d)
@@ -373,8 +373,8 @@
         unmapped-symbolics-keys
         (unmapped-ps2-keys *ps2-map*))
     (dolist (symbolics-key-entry *symbolics-map*)
-      (destructuring-bind (symbolics-keyname symbolics-scancode &rest geometry-info) symbolics-key-entry
-        (declare (ignore geometry-info))
+      (let ((symbolics-keyname (key-name symbolics-key-entry))
+            (symbolics-scancode (key-scancode symbolics-key-entry)))
         (cond
           ((f-mode-key-p symbolics-key-entry)
            (setf (aref flag-map symbolics-scancode) +f-mode-switch+))
