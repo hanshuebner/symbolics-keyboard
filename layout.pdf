@@ -1,0 +1,3530 @@
+%PDF-1.4
+1 0 obj
+<< /Outlines 3 0 R
+/Type /Catalog
+/Pages 2 0 R
+ >>
+ endobj
+2 0 obj
+<< /Type /Pages
+/Count 1
+/Kids [ 5 0 R ]
+ >>
+ endobj
+3 0 obj
+<< /Type /Outlines 
+/First 7 0 R
+/Last 7 0 R
+/Count 0
+ >>
+ endobj
+4 0 obj
+<< /Creator (cl-pdf 2.03 - )
+/CreationDate (D:20080601133830)
+ >>
+ endobj
+5 0 obj
+<< /Type /Page
+/Parent 2 0 R 
+/MediaBox [ 0 0 595 841 ]
+/Resources << /XObject <<  >>
+
+/ProcSet [ /PDF /Text ]
+/ExtGState <<  >>
+
+/Font << /CLF103 9 0 R
+/CLF102 8 0 R
+ >>
+
+ >>
+
+/Annots [ ] 
+/Rotate 0
+/Contents 6 0 R
+ >>
+ endobj
+6 0 obj
+<< /Length 44123
+ >>
+stream
+BT
+/CLF102 14.00 Tf
+    70.0    800.0 Td
+(kbdbabel-symbolics Symbolics to PS/2 Adapter key code mapping) Tj
+ET
+BT
+/CLF103 8.00 Tf
+   240.0     10.0 Td
+(kbdbabel for Symbolics keyboard - by Alexander Kurz and Hans Hübner - http://kbdbabel.net/) Tj
+ET
+BT
+/CLF102 12.00 Tf
+    70.0     35.0 Td
+(PS/2 scan codes \(top: standard, bottom: F-mode\)) Tj
+ET
+1.0 0.0 0.0 1.0      0.0     50.0 cm
+q
+1.0 0.0 0.0 1.0     70.0      0.0 cm
+     25.0 0.0 0.0     25.0 0.0 0.0 cm
+    0.05 w
+  0.2   0.2   0.2 RG
+     0.0      0.0 m
+    20.0      0.0 l
+     0.0      0.0 m
+     0.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      0.6 Td
+(0A) Tj
+     0.0     -0.4 Td
+(0A) Tj
+ET
+     1.0      0.0 m
+     1.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     1.1      0.6 Td
+(83) Tj
+     0.0     -0.4 Td
+(83) Tj
+ET
+     2.0      0.0 m
+     2.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      0.6 Td
+(11) Tj
+     0.0     -0.4 Td
+(11) Tj
+ET
+     3.0      0.0 m
+     3.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     3.1      0.6 Td
+(14) Tj
+     0.0     -0.4 Td
+(14) Tj
+ET
+     5.0      0.0 m
+     5.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     5.1      0.6 Td
+(29) Tj
+     0.0     -0.4 Td
+(29) Tj
+ET
+    13.5      0.0 m
+    13.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    13.6      0.6 Td
+(E0 14) Tj
+     0.0     -0.4 Td
+(E0 14) Tj
+ET
+    15.5      0.0 m
+    15.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    15.6      0.6 Td
+(E0 11) Tj
+     0.0     -0.4 Td
+(E0 6B) Tj
+ET
+    16.5      0.0 m
+    16.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.6      0.6 Td
+(71) Tj
+     0.0     -0.4 Td
+(E0 72) Tj
+ET
+    17.5      0.0 m
+    17.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    17.6      0.6 Td
+(79) Tj
+     0.0     -0.4 Td
+(E0 74) Tj
+ET
+    18.5      0.0 m
+    18.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.6      0.6 Td
+(01) Tj
+     0.0     -0.4 Td
+(E0 7A) Tj
+ET
+     0.0      1.0 m
+    20.0      1.0 l
+     0.0      1.0 m
+     0.0      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      1.6 Td
+(58) Tj
+     0.0     -0.4 Td
+(58) Tj
+ET
+     1.0      1.0 m
+     1.0      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     1.1      1.6 Td
+(75) Tj
+     0.0     -0.4 Td
+(75) Tj
+ET
+    2.25      1.0 m
+    2.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    2.35      1.6 Td
+(12) Tj
+     0.0     -0.4 Td
+(12) Tj
+ET
+    4.25      1.0 m
+    4.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    4.35      1.6 Td
+(1A) Tj
+     0.0     -0.4 Td
+(1A) Tj
+ET
+    5.25      1.0 m
+    5.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    5.35      1.6 Td
+(22) Tj
+     0.0     -0.4 Td
+(22) Tj
+ET
+    6.25      1.0 m
+    6.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    6.35      1.6 Td
+(21) Tj
+     0.0     -0.4 Td
+(21) Tj
+ET
+    7.25      1.0 m
+    7.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    7.35      1.6 Td
+(2A) Tj
+     0.0     -0.4 Td
+(2A) Tj
+ET
+    8.25      1.0 m
+    8.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    8.35      1.6 Td
+(32) Tj
+     0.0     -0.4 Td
+(32) Tj
+ET
+    9.25      1.0 m
+    9.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    9.35      1.6 Td
+(31) Tj
+     0.0     -0.4 Td
+(31) Tj
+ET
+   10.25      1.0 m
+   10.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   10.35      1.6 Td
+(3A) Tj
+     0.0     -0.4 Td
+(3A) Tj
+ET
+   11.25      1.0 m
+   11.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   11.35      1.6 Td
+(41) Tj
+     0.0     -0.4 Td
+(41) Tj
+ET
+   12.25      1.0 m
+   12.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   12.35      1.6 Td
+(49) Tj
+     0.0     -0.4 Td
+(49) Tj
+ET
+   13.25      1.0 m
+   13.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   13.35      1.6 Td
+(4A) Tj
+     0.0     -0.4 Td
+(4A) Tj
+ET
+   14.25      1.0 m
+   14.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   14.35      1.6 Td
+(59) Tj
+     0.0     -0.4 Td
+(59) Tj
+ET
+   16.25      1.0 m
+   16.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   16.35      1.6 Td
+(73) Tj
+     0.0     -0.4 Td
+(E0 75) Tj
+ET
+    17.5      1.0 m
+    17.5      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    17.6      1.6 Td
+(E0 4A) Tj
+     0.0     -0.4 Td
+(E0 7D) Tj
+ET
+   18.75      1.0 m
+   18.75      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   18.85      1.6 Td
+() Tj
+     0.0     -0.4 Td
+() Tj
+ET
+     0.0      2.0 m
+    20.0      2.0 l
+     0.0      2.0 m
+     0.0      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      2.6 Td
+(05) Tj
+     0.0     -0.4 Td
+(05) Tj
+ET
+     2.0      2.0 m
+     2.0      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      2.6 Td
+(E0 71) Tj
+     0.0     -0.4 Td
+(E0 71) Tj
+ET
+    3.75      2.0 m
+    3.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    3.85      2.6 Td
+(1C) Tj
+     0.0     -0.4 Td
+(1C) Tj
+ET
+    4.75      2.0 m
+    4.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    4.85      2.6 Td
+(1B) Tj
+     0.0     -0.4 Td
+(1B) Tj
+ET
+    5.75      2.0 m
+    5.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    5.85      2.6 Td
+(23) Tj
+     0.0     -0.4 Td
+(23) Tj
+ET
+    6.75      2.0 m
+    6.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    6.85      2.6 Td
+(2B) Tj
+     0.0     -0.4 Td
+(2B) Tj
+ET
+    7.75      2.0 m
+    7.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    7.85      2.6 Td
+(34) Tj
+     0.0     -0.4 Td
+(34) Tj
+ET
+    8.75      2.0 m
+    8.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    8.85      2.6 Td
+(33) Tj
+     0.0     -0.4 Td
+(33) Tj
+ET
+    9.75      2.0 m
+    9.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    9.85      2.6 Td
+(3B) Tj
+     0.0     -0.4 Td
+(3B) Tj
+ET
+   10.75      2.0 m
+   10.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   10.85      2.6 Td
+(42) Tj
+     0.0     -0.4 Td
+(42) Tj
+ET
+   11.75      2.0 m
+   11.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   11.85      2.6 Td
+(4B) Tj
+     0.0     -0.4 Td
+(4B) Tj
+ET
+   12.75      2.0 m
+   12.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   12.85      2.6 Td
+(4C) Tj
+     0.0     -0.4 Td
+(4C) Tj
+ET
+   13.75      2.0 m
+   13.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   13.85      2.6 Td
+() Tj
+     0.0     -0.4 Td
+() Tj
+ET
+   14.75      2.0 m
+   14.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   14.85      2.6 Td
+(5A) Tj
+     0.0     -0.4 Td
+(5A) Tj
+ET
+   16.75      2.0 m
+   16.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   16.85      2.6 Td
+(6C) Tj
+     0.0     -0.4 Td
+(6C) Tj
+ET
+    18.0      2.0 m
+    18.0      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      2.6 Td
+(69) Tj
+     0.0     -0.4 Td
+(E0 69) Tj
+ET
+     0.0      3.0 m
+    20.0      3.0 l
+     0.0      3.0 m
+     0.0      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      3.6 Td
+() Tj
+     0.0     -0.4 Td
+() Tj
+ET
+     2.0      3.0 m
+     2.0      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      3.6 Td
+(0D) Tj
+     0.0     -0.4 Td
+(0D) Tj
+ET
+     3.5      3.0 m
+     3.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     3.6      3.6 Td
+(15) Tj
+     0.0     -0.4 Td
+(15) Tj
+ET
+     4.5      3.0 m
+     4.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     4.6      3.6 Td
+(1D) Tj
+     0.0     -0.4 Td
+(1D) Tj
+ET
+     5.5      3.0 m
+     5.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     5.6      3.6 Td
+(24) Tj
+     0.0     -0.4 Td
+(24) Tj
+ET
+     6.5      3.0 m
+     6.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     6.6      3.6 Td
+(2D) Tj
+     0.0     -0.4 Td
+(2D) Tj
+ET
+     7.5      3.0 m
+     7.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     7.6      3.6 Td
+(2C) Tj
+     0.0     -0.4 Td
+(2C) Tj
+ET
+     8.5      3.0 m
+     8.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     8.6      3.6 Td
+(35) Tj
+     0.0     -0.4 Td
+(35) Tj
+ET
+     9.5      3.0 m
+     9.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     9.6      3.6 Td
+(3C) Tj
+     0.0     -0.4 Td
+(3C) Tj
+ET
+    10.5      3.0 m
+    10.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    10.6      3.6 Td
+(43) Tj
+     0.0     -0.4 Td
+(43) Tj
+ET
+    11.5      3.0 m
+    11.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    11.6      3.6 Td
+(44) Tj
+     0.0     -0.4 Td
+(44) Tj
+ET
+    12.5      3.0 m
+    12.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    12.6      3.6 Td
+(4D) Tj
+     0.0     -0.4 Td
+(4D) Tj
+ET
+    13.5      3.0 m
+    13.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    13.6      3.6 Td
+(54) Tj
+     0.0     -0.4 Td
+(54) Tj
+ET
+    14.5      3.0 m
+    14.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    14.6      3.6 Td
+(5B) Tj
+     0.0     -0.4 Td
+(5B) Tj
+ET
+    15.5      3.0 m
+    15.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    15.6      3.6 Td
+(66) Tj
+     0.0     -0.4 Td
+(66) Tj
+ET
+    16.5      3.0 m
+    16.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.6      3.6 Td
+(74) Tj
+     0.0     -0.4 Td
+(74) Tj
+ET
+    18.0      3.0 m
+    18.0      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      3.6 Td
+(78) Tj
+     0.0     -0.4 Td
+(E0 6C) Tj
+ET
+     0.0      4.0 m
+    20.0      4.0 l
+     0.0      4.0 m
+     0.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      4.6 Td
+(06) Tj
+     0.0     -0.4 Td
+(06) Tj
+ET
+     2.0      4.0 m
+     2.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      4.6 Td
+(7C) Tj
+     0.0     -0.4 Td
+(7C) Tj
+ET
+     3.0      4.0 m
+     3.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     3.1      4.6 Td
+(16) Tj
+     0.0     -0.4 Td
+(16) Tj
+ET
+     4.0      4.0 m
+     4.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     4.1      4.6 Td
+(1E) Tj
+     0.0     -0.4 Td
+(1E) Tj
+ET
+     5.0      4.0 m
+     5.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     5.1      4.6 Td
+(26) Tj
+     0.0     -0.4 Td
+(26) Tj
+ET
+     6.0      4.0 m
+     6.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     6.1      4.6 Td
+(25) Tj
+     0.0     -0.4 Td
+(25) Tj
+ET
+     7.0      4.0 m
+     7.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     7.1      4.6 Td
+(2E) Tj
+     0.0     -0.4 Td
+(2E) Tj
+ET
+     8.0      4.0 m
+     8.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     8.1      4.6 Td
+(36) Tj
+     0.0     -0.4 Td
+(36) Tj
+ET
+     9.0      4.0 m
+     9.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     9.1      4.6 Td
+(3D) Tj
+     0.0     -0.4 Td
+(3D) Tj
+ET
+    10.0      4.0 m
+    10.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    10.1      4.6 Td
+(3E) Tj
+     0.0     -0.4 Td
+(3E) Tj
+ET
+    11.0      4.0 m
+    11.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    11.1      4.6 Td
+(46) Tj
+     0.0     -0.4 Td
+(46) Tj
+ET
+    12.0      4.0 m
+    12.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    12.1      4.6 Td
+(45) Tj
+     0.0     -0.4 Td
+(45) Tj
+ET
+    13.0      4.0 m
+    13.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    13.1      4.6 Td
+(4E) Tj
+     0.0     -0.4 Td
+(4E) Tj
+ET
+    14.0      4.0 m
+    14.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    14.1      4.6 Td
+(55) Tj
+     0.0     -0.4 Td
+(55) Tj
+ET
+    15.0      4.0 m
+    15.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    15.1      4.6 Td
+(0E) Tj
+     0.0     -0.4 Td
+(0E) Tj
+ET
+    16.0      4.0 m
+    16.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.1      4.6 Td
+(5D) Tj
+     0.0     -0.4 Td
+(5D) Tj
+ET
+    17.0      4.0 m
+    17.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    17.1      4.6 Td
+(7B) Tj
+     0.0     -0.4 Td
+(7B) Tj
+ET
+    18.0      4.0 m
+    18.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      4.6 Td
+(07) Tj
+     0.0     -0.4 Td
+(07) Tj
+ET
+     0.0      5.0 m
+    20.0      5.0 l
+     0.0      5.0 m
+     0.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      5.6 Td
+(04) Tj
+     0.0     -0.4 Td
+(04) Tj
+ET
+     2.0      5.0 m
+     2.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      5.6 Td
+(76) Tj
+     0.0     -0.4 Td
+(76) Tj
+ET
+     4.0      5.0 m
+     4.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     4.1      5.6 Td
+(70) Tj
+     0.0     -0.4 Td
+(70) Tj
+ET
+     6.0      5.0 m
+     6.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     6.1      5.6 Td
+(6B) Tj
+     0.0     -0.4 Td
+(6B) Tj
+ET
+     8.0      5.0 m
+     8.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     8.1      5.6 Td
+(7A) Tj
+     0.0     -0.4 Td
+(7A) Tj
+ET
+    10.0      5.0 m
+    10.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    10.1      5.6 Td
+(72) Tj
+     0.0     -0.4 Td
+(72) Tj
+ET
+    12.0      5.0 m
+    12.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    12.1      5.6 Td
+(09) Tj
+     0.0     -0.4 Td
+(09) Tj
+ET
+    14.0      5.0 m
+    14.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    14.1      5.6 Td
+(0C) Tj
+     0.0     -0.4 Td
+(0C) Tj
+ET
+    16.0      5.0 m
+    16.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.1      5.6 Td
+(03) Tj
+     0.0     -0.4 Td
+(03) Tj
+ET
+    18.0      5.0 m
+    18.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      5.6 Td
+(0B) Tj
+     0.0     -0.4 Td
+(0B) Tj
+ET
+     0.0      6.0 m
+    20.0      6.0 l
+ S
+    20.0      6.0 m
+    20.0      0.0 l
+ S
+Q
+BT
+/CLF102 12.00 Tf
+    70.0    175.0 Td
+(F-Mode mapping) Tj
+ET
+1.0 0.0 0.0 1.0      0.0    190.0 cm
+q
+1.0 0.0 0.0 1.0     70.0      0.0 cm
+     25.0 0.0 0.0     25.0 0.0 0.0 cm
+    0.05 w
+  0.2   0.2   0.2 RG
+     0.0      0.0 m
+    20.0      0.0 l
+     0.0      0.0 m
+     0.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      0.6 Td
+     0.0     -0.4 Td
+(F8) Tj
+ET
+     1.0      0.0 m
+     1.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     1.1      0.6 Td
+     0.0     -0.4 Td
+(F7) Tj
+ET
+     2.0      0.0 m
+     2.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      0.6 Td
+(Alt) Tj
+     0.0     -0.4 Td
+(L) Tj
+ET
+     3.0      0.0 m
+     3.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     3.1      0.6 Td
+(Ctrl) Tj
+     0.0     -0.4 Td
+(L) Tj
+ET
+     5.0      0.0 m
+     5.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     5.1      0.6 Td
+     0.0     -0.4 Td
+(Space) Tj
+ET
+    13.5      0.0 m
+    13.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    13.6      0.6 Td
+(Ctrl) Tj
+     0.0     -0.4 Td
+(R) Tj
+ET
+    15.5      0.0 m
+    15.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    15.6      0.6 Td
+     0.0     -0.4 Td
+(Left) Tj
+ET
+    16.5      0.0 m
+    16.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.6      0.6 Td
+     0.0     -0.4 Td
+(Down) Tj
+ET
+    17.5      0.0 m
+    17.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    17.6      0.6 Td
+     0.0     -0.4 Td
+(Right) Tj
+ET
+    18.5      0.0 m
+    18.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.6      0.6 Td
+(Pg) Tj
+     0.0     -0.4 Td
+(Dn) Tj
+ET
+     0.0      1.0 m
+    20.0      1.0 l
+     0.0      1.0 m
+     0.0      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      1.6 Td
+     0.0     -0.4 Td
+(Caps) Tj
+ET
+     1.0      1.0 m
+     1.0      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     1.1      1.6 Td
+     0.0     -0.4 Td
+(KP8) Tj
+ET
+    2.25      1.0 m
+    2.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    2.35      1.6 Td
+(Shift) Tj
+     0.0     -0.4 Td
+(L) Tj
+ET
+    4.25      1.0 m
+    4.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    4.35      1.6 Td
+     0.0     -0.4 Td
+(Z) Tj
+ET
+    5.25      1.0 m
+    5.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    5.35      1.6 Td
+     0.0     -0.4 Td
+(X) Tj
+ET
+    6.25      1.0 m
+    6.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    6.35      1.6 Td
+     0.0     -0.4 Td
+(C) Tj
+ET
+    7.25      1.0 m
+    7.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    7.35      1.6 Td
+     0.0     -0.4 Td
+(V) Tj
+ET
+    8.25      1.0 m
+    8.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    8.35      1.6 Td
+     0.0     -0.4 Td
+(B) Tj
+ET
+    9.25      1.0 m
+    9.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    9.35      1.6 Td
+     0.0     -0.4 Td
+(N) Tj
+ET
+   10.25      1.0 m
+   10.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   10.35      1.6 Td
+     0.0     -0.4 Td
+(M) Tj
+ET
+   11.25      1.0 m
+   11.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   11.35      1.6 Td
+     0.0     -0.4 Td
+(,) Tj
+ET
+   12.25      1.0 m
+   12.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   12.35      1.6 Td
+     0.0     -0.4 Td
+(.) Tj
+ET
+   13.25      1.0 m
+   13.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   13.35      1.6 Td
+     0.0     -0.4 Td
+(/) Tj
+ET
+   14.25      1.0 m
+   14.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   14.35      1.6 Td
+(Shift) Tj
+     0.0     -0.4 Td
+(R) Tj
+ET
+   16.25      1.0 m
+   16.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   16.35      1.6 Td
+     0.0     -0.4 Td
+(Up) Tj
+ET
+    17.5      1.0 m
+    17.5      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    17.6      1.6 Td
+(Pg) Tj
+     0.0     -0.4 Td
+(Up) Tj
+ET
+   18.75      1.0 m
+   18.75      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   18.85      1.6 Td
+(F-Mode) Tj
+     0.0     -0.4 Td
+(Lock) Tj
+ET
+     0.0      2.0 m
+    20.0      2.0 l
+     0.0      2.0 m
+     0.0      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      2.6 Td
+     0.0     -0.4 Td
+(F1) Tj
+ET
+     2.0      2.0 m
+     2.0      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      2.6 Td
+     0.0     -0.4 Td
+(Del) Tj
+ET
+    3.75      2.0 m
+    3.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    3.85      2.6 Td
+     0.0     -0.4 Td
+(A) Tj
+ET
+    4.75      2.0 m
+    4.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    4.85      2.6 Td
+     0.0     -0.4 Td
+(S) Tj
+ET
+    5.75      2.0 m
+    5.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    5.85      2.6 Td
+     0.0     -0.4 Td
+(D) Tj
+ET
+    6.75      2.0 m
+    6.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    6.85      2.6 Td
+     0.0     -0.4 Td
+(F) Tj
+ET
+    7.75      2.0 m
+    7.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    7.85      2.6 Td
+     0.0     -0.4 Td
+(G) Tj
+ET
+    8.75      2.0 m
+    8.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    8.85      2.6 Td
+     0.0     -0.4 Td
+(H) Tj
+ET
+    9.75      2.0 m
+    9.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    9.85      2.6 Td
+     0.0     -0.4 Td
+(J) Tj
+ET
+   10.75      2.0 m
+   10.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   10.85      2.6 Td
+     0.0     -0.4 Td
+(K) Tj
+ET
+   11.75      2.0 m
+   11.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   11.85      2.6 Td
+     0.0     -0.4 Td
+(L) Tj
+ET
+   12.75      2.0 m
+   12.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   12.85      2.6 Td
+     0.0     -0.4 Td
+(;) Tj
+ET
+   13.75      2.0 m
+   13.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   13.85      2.6 Td
+ET
+   14.75      2.0 m
+   14.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   14.85      2.6 Td
+     0.0     -0.4 Td
+(Return) Tj
+ET
+   16.75      2.0 m
+   16.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   16.85      2.6 Td
+     0.0     -0.4 Td
+(KP7) Tj
+ET
+    18.0      2.0 m
+    18.0      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      2.6 Td
+     0.0     -0.4 Td
+(End) Tj
+ET
+     0.0      3.0 m
+    20.0      3.0 l
+     0.0      3.0 m
+     0.0      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      3.6 Td
+     0.0     -0.4 Td
+(F-Mode) Tj
+ET
+     2.0      3.0 m
+     2.0      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      3.6 Td
+     0.0     -0.4 Td
+(Tab) Tj
+ET
+     3.5      3.0 m
+     3.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     3.6      3.6 Td
+     0.0     -0.4 Td
+(Q) Tj
+ET
+     4.5      3.0 m
+     4.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     4.6      3.6 Td
+     0.0     -0.4 Td
+(W) Tj
+ET
+     5.5      3.0 m
+     5.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     5.6      3.6 Td
+     0.0     -0.4 Td
+(E) Tj
+ET
+     6.5      3.0 m
+     6.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     6.6      3.6 Td
+     0.0     -0.4 Td
+(R) Tj
+ET
+     7.5      3.0 m
+     7.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     7.6      3.6 Td
+     0.0     -0.4 Td
+(T) Tj
+ET
+     8.5      3.0 m
+     8.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     8.6      3.6 Td
+     0.0     -0.4 Td
+(Y) Tj
+ET
+     9.5      3.0 m
+     9.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     9.6      3.6 Td
+     0.0     -0.4 Td
+(U) Tj
+ET
+    10.5      3.0 m
+    10.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    10.6      3.6 Td
+     0.0     -0.4 Td
+(I) Tj
+ET
+    11.5      3.0 m
+    11.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    11.6      3.6 Td
+     0.0     -0.4 Td
+(O) Tj
+ET
+    12.5      3.0 m
+    12.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    12.6      3.6 Td
+     0.0     -0.4 Td
+(P) Tj
+ET
+    13.5      3.0 m
+    13.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    13.6      3.6 Td
+     0.0     -0.4 Td
+([) Tj
+ET
+    14.5      3.0 m
+    14.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    14.6      3.6 Td
+     0.0     -0.4 Td
+(]) Tj
+ET
+    15.5      3.0 m
+    15.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    15.6      3.6 Td
+(Back) Tj
+     0.0     -0.4 Td
+(Space) Tj
+ET
+    16.5      3.0 m
+    16.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.6      3.6 Td
+     0.0     -0.4 Td
+(KP6) Tj
+ET
+    18.0      3.0 m
+    18.0      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      3.6 Td
+     0.0     -0.4 Td
+(Home) Tj
+ET
+     0.0      4.0 m
+    20.0      4.0 l
+     0.0      4.0 m
+     0.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      4.6 Td
+     0.0     -0.4 Td
+(F2) Tj
+ET
+     2.0      4.0 m
+     2.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      4.6 Td
+     0.0     -0.4 Td
+(KP*) Tj
+ET
+     3.0      4.0 m
+     3.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     3.1      4.6 Td
+     0.0     -0.4 Td
+(1) Tj
+ET
+     4.0      4.0 m
+     4.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     4.1      4.6 Td
+     0.0     -0.4 Td
+(2) Tj
+ET
+     5.0      4.0 m
+     5.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     5.1      4.6 Td
+     0.0     -0.4 Td
+(3) Tj
+ET
+     6.0      4.0 m
+     6.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     6.1      4.6 Td
+     0.0     -0.4 Td
+(4) Tj
+ET
+     7.0      4.0 m
+     7.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     7.1      4.6 Td
+     0.0     -0.4 Td
+(5) Tj
+ET
+     8.0      4.0 m
+     8.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     8.1      4.6 Td
+     0.0     -0.4 Td
+(6) Tj
+ET
+     9.0      4.0 m
+     9.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     9.1      4.6 Td
+     0.0     -0.4 Td
+(7) Tj
+ET
+    10.0      4.0 m
+    10.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    10.1      4.6 Td
+     0.0     -0.4 Td
+(8) Tj
+ET
+    11.0      4.0 m
+    11.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    11.1      4.6 Td
+     0.0     -0.4 Td
+(9) Tj
+ET
+    12.0      4.0 m
+    12.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    12.1      4.6 Td
+     0.0     -0.4 Td
+(0) Tj
+ET
+    13.0      4.0 m
+    13.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    13.1      4.6 Td
+     0.0     -0.4 Td
+(-) Tj
+ET
+    14.0      4.0 m
+    14.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    14.1      4.6 Td
+     0.0     -0.4 Td
+(=) Tj
+ET
+    15.0      4.0 m
+    15.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    15.1      4.6 Td
+     0.0     -0.4 Td
+(`) Tj
+ET
+    16.0      4.0 m
+    16.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.1      4.6 Td
+     0.0     -0.4 Td
+(\\) Tj
+ET
+    17.0      4.0 m
+    17.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    17.1      4.6 Td
+     0.0     -0.4 Td
+(KP-) Tj
+ET
+    18.0      4.0 m
+    18.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      4.6 Td
+     0.0     -0.4 Td
+(F12) Tj
+ET
+     0.0      5.0 m
+    20.0      5.0 l
+     0.0      5.0 m
+     0.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      5.6 Td
+     0.0     -0.4 Td
+(F3) Tj
+ET
+     2.0      5.0 m
+     2.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      5.6 Td
+     0.0     -0.4 Td
+(Escape) Tj
+ET
+     4.0      5.0 m
+     4.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     4.1      5.6 Td
+     0.0     -0.4 Td
+(KP0) Tj
+ET
+     6.0      5.0 m
+     6.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     6.1      5.6 Td
+     0.0     -0.4 Td
+(KP4) Tj
+ET
+     8.0      5.0 m
+     8.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     8.1      5.6 Td
+     0.0     -0.4 Td
+(KP3) Tj
+ET
+    10.0      5.0 m
+    10.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    10.1      5.6 Td
+     0.0     -0.4 Td
+(KP2) Tj
+ET
+    12.0      5.0 m
+    12.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    12.1      5.6 Td
+     0.0     -0.4 Td
+(F10) Tj
+ET
+    14.0      5.0 m
+    14.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    14.1      5.6 Td
+     0.0     -0.4 Td
+(F4) Tj
+ET
+    16.0      5.0 m
+    16.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.1      5.6 Td
+     0.0     -0.4 Td
+(F5) Tj
+ET
+    18.0      5.0 m
+    18.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      5.6 Td
+     0.0     -0.4 Td
+(F6) Tj
+ET
+     0.0      6.0 m
+    20.0      6.0 l
+ S
+    20.0      6.0 m
+    20.0      0.0 l
+ S
+Q
+BT
+/CLF102 12.00 Tf
+    70.0    175.0 Td
+(Standard mapping) Tj
+ET
+1.0 0.0 0.0 1.0      0.0    190.0 cm
+q
+1.0 0.0 0.0 1.0     70.0      0.0 cm
+     25.0 0.0 0.0     25.0 0.0 0.0 cm
+    0.05 w
+  0.2   0.2   0.2 RG
+     0.0      0.0 m
+    20.0      0.0 l
+     0.0      0.0 m
+     0.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      0.6 Td
+     0.0     -0.4 Td
+(F8) Tj
+ET
+     1.0      0.0 m
+     1.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     1.1      0.6 Td
+     0.0     -0.4 Td
+(F7) Tj
+ET
+     2.0      0.0 m
+     2.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      0.6 Td
+(Alt) Tj
+     0.0     -0.4 Td
+(L) Tj
+ET
+     3.0      0.0 m
+     3.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     3.1      0.6 Td
+(Ctrl) Tj
+     0.0     -0.4 Td
+(L) Tj
+ET
+     5.0      0.0 m
+     5.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     5.1      0.6 Td
+     0.0     -0.4 Td
+(Space) Tj
+ET
+    13.5      0.0 m
+    13.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    13.6      0.6 Td
+(Ctrl) Tj
+     0.0     -0.4 Td
+(R) Tj
+ET
+    15.5      0.0 m
+    15.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    15.6      0.6 Td
+(Alt) Tj
+     0.0     -0.4 Td
+(Gr) Tj
+ET
+    16.5      0.0 m
+    16.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.6      0.6 Td
+     0.0     -0.4 Td
+(KP.) Tj
+ET
+    17.5      0.0 m
+    17.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    17.6      0.6 Td
+     0.0     -0.4 Td
+(KP+) Tj
+ET
+    18.5      0.0 m
+    18.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.6      0.6 Td
+     0.0     -0.4 Td
+(F9) Tj
+ET
+     0.0      1.0 m
+    20.0      1.0 l
+     0.0      1.0 m
+     0.0      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      1.6 Td
+     0.0     -0.4 Td
+(Caps) Tj
+ET
+     1.0      1.0 m
+     1.0      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     1.1      1.6 Td
+     0.0     -0.4 Td
+(KP8) Tj
+ET
+    2.25      1.0 m
+    2.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    2.35      1.6 Td
+(Shift) Tj
+     0.0     -0.4 Td
+(L) Tj
+ET
+    4.25      1.0 m
+    4.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    4.35      1.6 Td
+     0.0     -0.4 Td
+(Z) Tj
+ET
+    5.25      1.0 m
+    5.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    5.35      1.6 Td
+     0.0     -0.4 Td
+(X) Tj
+ET
+    6.25      1.0 m
+    6.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    6.35      1.6 Td
+     0.0     -0.4 Td
+(C) Tj
+ET
+    7.25      1.0 m
+    7.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    7.35      1.6 Td
+     0.0     -0.4 Td
+(V) Tj
+ET
+    8.25      1.0 m
+    8.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    8.35      1.6 Td
+     0.0     -0.4 Td
+(B) Tj
+ET
+    9.25      1.0 m
+    9.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    9.35      1.6 Td
+     0.0     -0.4 Td
+(N) Tj
+ET
+   10.25      1.0 m
+   10.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   10.35      1.6 Td
+     0.0     -0.4 Td
+(M) Tj
+ET
+   11.25      1.0 m
+   11.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   11.35      1.6 Td
+     0.0     -0.4 Td
+(,) Tj
+ET
+   12.25      1.0 m
+   12.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   12.35      1.6 Td
+     0.0     -0.4 Td
+(.) Tj
+ET
+   13.25      1.0 m
+   13.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   13.35      1.6 Td
+     0.0     -0.4 Td
+(/) Tj
+ET
+   14.25      1.0 m
+   14.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   14.35      1.6 Td
+(Shift) Tj
+     0.0     -0.4 Td
+(R) Tj
+ET
+   16.25      1.0 m
+   16.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   16.35      1.6 Td
+     0.0     -0.4 Td
+(KP5) Tj
+ET
+    17.5      1.0 m
+    17.5      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    17.6      1.6 Td
+     0.0     -0.4 Td
+(KP/) Tj
+ET
+   18.75      1.0 m
+   18.75      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   18.85      1.6 Td
+(F-Mode) Tj
+     0.0     -0.4 Td
+(Lock) Tj
+ET
+     0.0      2.0 m
+    20.0      2.0 l
+     0.0      2.0 m
+     0.0      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      2.6 Td
+     0.0     -0.4 Td
+(F1) Tj
+ET
+     2.0      2.0 m
+     2.0      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      2.6 Td
+     0.0     -0.4 Td
+(Del) Tj
+ET
+    3.75      2.0 m
+    3.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    3.85      2.6 Td
+     0.0     -0.4 Td
+(A) Tj
+ET
+    4.75      2.0 m
+    4.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    4.85      2.6 Td
+     0.0     -0.4 Td
+(S) Tj
+ET
+    5.75      2.0 m
+    5.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    5.85      2.6 Td
+     0.0     -0.4 Td
+(D) Tj
+ET
+    6.75      2.0 m
+    6.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    6.85      2.6 Td
+     0.0     -0.4 Td
+(F) Tj
+ET
+    7.75      2.0 m
+    7.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    7.85      2.6 Td
+     0.0     -0.4 Td
+(G) Tj
+ET
+    8.75      2.0 m
+    8.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    8.85      2.6 Td
+     0.0     -0.4 Td
+(H) Tj
+ET
+    9.75      2.0 m
+    9.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    9.85      2.6 Td
+     0.0     -0.4 Td
+(J) Tj
+ET
+   10.75      2.0 m
+   10.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   10.85      2.6 Td
+     0.0     -0.4 Td
+(K) Tj
+ET
+   11.75      2.0 m
+   11.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   11.85      2.6 Td
+     0.0     -0.4 Td
+(L) Tj
+ET
+   12.75      2.0 m
+   12.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   12.85      2.6 Td
+     0.0     -0.4 Td
+(;) Tj
+ET
+   13.75      2.0 m
+   13.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   13.85      2.6 Td
+ET
+   14.75      2.0 m
+   14.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   14.85      2.6 Td
+     0.0     -0.4 Td
+(Return) Tj
+ET
+   16.75      2.0 m
+   16.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   16.85      2.6 Td
+     0.0     -0.4 Td
+(KP7) Tj
+ET
+    18.0      2.0 m
+    18.0      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      2.6 Td
+     0.0     -0.4 Td
+(KP1) Tj
+ET
+     0.0      3.0 m
+    20.0      3.0 l
+     0.0      3.0 m
+     0.0      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      3.6 Td
+     0.0     -0.4 Td
+(F-Mode) Tj
+ET
+     2.0      3.0 m
+     2.0      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      3.6 Td
+     0.0     -0.4 Td
+(Tab) Tj
+ET
+     3.5      3.0 m
+     3.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     3.6      3.6 Td
+     0.0     -0.4 Td
+(Q) Tj
+ET
+     4.5      3.0 m
+     4.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     4.6      3.6 Td
+     0.0     -0.4 Td
+(W) Tj
+ET
+     5.5      3.0 m
+     5.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     5.6      3.6 Td
+     0.0     -0.4 Td
+(E) Tj
+ET
+     6.5      3.0 m
+     6.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     6.6      3.6 Td
+     0.0     -0.4 Td
+(R) Tj
+ET
+     7.5      3.0 m
+     7.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     7.6      3.6 Td
+     0.0     -0.4 Td
+(T) Tj
+ET
+     8.5      3.0 m
+     8.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     8.6      3.6 Td
+     0.0     -0.4 Td
+(Y) Tj
+ET
+     9.5      3.0 m
+     9.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     9.6      3.6 Td
+     0.0     -0.4 Td
+(U) Tj
+ET
+    10.5      3.0 m
+    10.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    10.6      3.6 Td
+     0.0     -0.4 Td
+(I) Tj
+ET
+    11.5      3.0 m
+    11.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    11.6      3.6 Td
+     0.0     -0.4 Td
+(O) Tj
+ET
+    12.5      3.0 m
+    12.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    12.6      3.6 Td
+     0.0     -0.4 Td
+(P) Tj
+ET
+    13.5      3.0 m
+    13.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    13.6      3.6 Td
+     0.0     -0.4 Td
+([) Tj
+ET
+    14.5      3.0 m
+    14.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    14.6      3.6 Td
+     0.0     -0.4 Td
+(]) Tj
+ET
+    15.5      3.0 m
+    15.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    15.6      3.6 Td
+(Back) Tj
+     0.0     -0.4 Td
+(Space) Tj
+ET
+    16.5      3.0 m
+    16.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.6      3.6 Td
+     0.0     -0.4 Td
+(KP6) Tj
+ET
+    18.0      3.0 m
+    18.0      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      3.6 Td
+     0.0     -0.4 Td
+(F11) Tj
+ET
+     0.0      4.0 m
+    20.0      4.0 l
+     0.0      4.0 m
+     0.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      4.6 Td
+     0.0     -0.4 Td
+(F2) Tj
+ET
+     2.0      4.0 m
+     2.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      4.6 Td
+     0.0     -0.4 Td
+(KP*) Tj
+ET
+     3.0      4.0 m
+     3.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     3.1      4.6 Td
+     0.0     -0.4 Td
+(1) Tj
+ET
+     4.0      4.0 m
+     4.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     4.1      4.6 Td
+     0.0     -0.4 Td
+(2) Tj
+ET
+     5.0      4.0 m
+     5.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     5.1      4.6 Td
+     0.0     -0.4 Td
+(3) Tj
+ET
+     6.0      4.0 m
+     6.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     6.1      4.6 Td
+     0.0     -0.4 Td
+(4) Tj
+ET
+     7.0      4.0 m
+     7.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     7.1      4.6 Td
+     0.0     -0.4 Td
+(5) Tj
+ET
+     8.0      4.0 m
+     8.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     8.1      4.6 Td
+     0.0     -0.4 Td
+(6) Tj
+ET
+     9.0      4.0 m
+     9.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     9.1      4.6 Td
+     0.0     -0.4 Td
+(7) Tj
+ET
+    10.0      4.0 m
+    10.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    10.1      4.6 Td
+     0.0     -0.4 Td
+(8) Tj
+ET
+    11.0      4.0 m
+    11.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    11.1      4.6 Td
+     0.0     -0.4 Td
+(9) Tj
+ET
+    12.0      4.0 m
+    12.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    12.1      4.6 Td
+     0.0     -0.4 Td
+(0) Tj
+ET
+    13.0      4.0 m
+    13.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    13.1      4.6 Td
+     0.0     -0.4 Td
+(-) Tj
+ET
+    14.0      4.0 m
+    14.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    14.1      4.6 Td
+     0.0     -0.4 Td
+(=) Tj
+ET
+    15.0      4.0 m
+    15.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    15.1      4.6 Td
+     0.0     -0.4 Td
+(`) Tj
+ET
+    16.0      4.0 m
+    16.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.1      4.6 Td
+     0.0     -0.4 Td
+(\\) Tj
+ET
+    17.0      4.0 m
+    17.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    17.1      4.6 Td
+     0.0     -0.4 Td
+(KP-) Tj
+ET
+    18.0      4.0 m
+    18.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      4.6 Td
+     0.0     -0.4 Td
+(F12) Tj
+ET
+     0.0      5.0 m
+    20.0      5.0 l
+     0.0      5.0 m
+     0.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      5.6 Td
+     0.0     -0.4 Td
+(F3) Tj
+ET
+     2.0      5.0 m
+     2.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      5.6 Td
+     0.0     -0.4 Td
+(Escape) Tj
+ET
+     4.0      5.0 m
+     4.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     4.1      5.6 Td
+     0.0     -0.4 Td
+(KP0) Tj
+ET
+     6.0      5.0 m
+     6.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     6.1      5.6 Td
+     0.0     -0.4 Td
+(KP4) Tj
+ET
+     8.0      5.0 m
+     8.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     8.1      5.6 Td
+     0.0     -0.4 Td
+(KP3) Tj
+ET
+    10.0      5.0 m
+    10.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    10.1      5.6 Td
+     0.0     -0.4 Td
+(KP2) Tj
+ET
+    12.0      5.0 m
+    12.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    12.1      5.6 Td
+     0.0     -0.4 Td
+(F10) Tj
+ET
+    14.0      5.0 m
+    14.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    14.1      5.6 Td
+     0.0     -0.4 Td
+(F4) Tj
+ET
+    16.0      5.0 m
+    16.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.1      5.6 Td
+     0.0     -0.4 Td
+(F5) Tj
+ET
+    18.0      5.0 m
+    18.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      5.6 Td
+     0.0     -0.4 Td
+(F6) Tj
+ET
+     0.0      6.0 m
+    20.0      6.0 l
+ S
+    20.0      6.0 m
+    20.0      0.0 l
+ S
+Q
+BT
+/CLF102 12.00 Tf
+    70.0    175.0 Td
+(Key caps) Tj
+ET
+1.0 0.0 0.0 1.0      0.0    190.0 cm
+q
+1.0 0.0 0.0 1.0     70.0      0.0 cm
+     25.0 0.0 0.0     25.0 0.0 0.0 cm
+    0.05 w
+  0.2   0.2   0.2 RG
+     0.0      0.0 m
+    20.0      0.0 l
+     0.0      0.0 m
+     0.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      0.6 Td
+(Hyper) Tj
+     0.0     -0.4 Td
+(L) Tj
+ET
+     1.0      0.0 m
+     1.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     1.1      0.6 Td
+(Super) Tj
+     0.0     -0.4 Td
+(L) Tj
+ET
+     2.0      0.0 m
+     2.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      0.6 Td
+(Meta) Tj
+     0.0     -0.4 Td
+(L) Tj
+ET
+     3.0      0.0 m
+     3.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     3.1      0.6 Td
+(Control) Tj
+     0.0     -0.4 Td
+(L) Tj
+ET
+     5.0      0.0 m
+     5.0      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     5.1      0.6 Td
+     0.0     -0.4 Td
+(Space) Tj
+ET
+    13.5      0.0 m
+    13.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    13.6      0.6 Td
+(Control) Tj
+     0.0     -0.4 Td
+(R) Tj
+ET
+    15.5      0.0 m
+    15.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    15.6      0.6 Td
+(Meta) Tj
+     0.0     -0.4 Td
+(R) Tj
+ET
+    16.5      0.0 m
+    16.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.6      0.6 Td
+(Super) Tj
+     0.0     -0.4 Td
+(R) Tj
+ET
+    17.5      0.0 m
+    17.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    17.6      0.6 Td
+(Hyper) Tj
+     0.0     -0.4 Td
+(R) Tj
+ET
+    18.5      0.0 m
+    18.5      1.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.6      0.6 Td
+     0.0     -0.4 Td
+(Scroll) Tj
+ET
+     0.0      1.0 m
+    20.0      1.0 l
+     0.0      1.0 m
+     0.0      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      1.6 Td
+(Caps) Tj
+     0.0     -0.4 Td
+(Lock) Tj
+ET
+     1.0      1.0 m
+     1.0      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     1.1      1.6 Td
+(Symbol) Tj
+     0.0     -0.4 Td
+(L) Tj
+ET
+    2.25      1.0 m
+    2.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    2.35      1.6 Td
+(Shift) Tj
+     0.0     -0.4 Td
+(L) Tj
+ET
+    4.25      1.0 m
+    4.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    4.35      1.6 Td
+     0.0     -0.4 Td
+(Z) Tj
+ET
+    5.25      1.0 m
+    5.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    5.35      1.6 Td
+     0.0     -0.4 Td
+(X) Tj
+ET
+    6.25      1.0 m
+    6.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    6.35      1.6 Td
+     0.0     -0.4 Td
+(C) Tj
+ET
+    7.25      1.0 m
+    7.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    7.35      1.6 Td
+     0.0     -0.4 Td
+(V) Tj
+ET
+    8.25      1.0 m
+    8.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    8.35      1.6 Td
+     0.0     -0.4 Td
+(B) Tj
+ET
+    9.25      1.0 m
+    9.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    9.35      1.6 Td
+     0.0     -0.4 Td
+(N) Tj
+ET
+   10.25      1.0 m
+   10.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   10.35      1.6 Td
+     0.0     -0.4 Td
+(M) Tj
+ET
+   11.25      1.0 m
+   11.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   11.35      1.6 Td
+(<) Tj
+     0.0     -0.4 Td
+(,) Tj
+ET
+   12.25      1.0 m
+   12.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   12.35      1.6 Td
+(>) Tj
+     0.0     -0.4 Td
+(.) Tj
+ET
+   13.25      1.0 m
+   13.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   13.35      1.6 Td
+(?) Tj
+     0.0     -0.4 Td
+(/) Tj
+ET
+   14.25      1.0 m
+   14.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   14.35      1.6 Td
+(Shift) Tj
+     0.0     -0.4 Td
+(R) Tj
+ET
+   16.25      1.0 m
+   16.25      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   16.35      1.6 Td
+(Symbol) Tj
+     0.0     -0.4 Td
+(R) Tj
+ET
+    17.5      1.0 m
+    17.5      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    17.6      1.6 Td
+     0.0     -0.4 Td
+(Repeat) Tj
+ET
+   18.75      1.0 m
+   18.75      2.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   18.85      1.6 Td
+(Mode) Tj
+     0.0     -0.4 Td
+(Lock) Tj
+ET
+     0.0      2.0 m
+    20.0      2.0 l
+     0.0      2.0 m
+     0.0      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      2.6 Td
+     0.0     -0.4 Td
+(Select) Tj
+ET
+     2.0      2.0 m
+     2.0      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      2.6 Td
+(Rub) Tj
+     0.0     -0.4 Td
+(Out) Tj
+ET
+    3.75      2.0 m
+    3.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    3.85      2.6 Td
+     0.0     -0.4 Td
+(A) Tj
+ET
+    4.75      2.0 m
+    4.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    4.85      2.6 Td
+     0.0     -0.4 Td
+(S) Tj
+ET
+    5.75      2.0 m
+    5.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    5.85      2.6 Td
+     0.0     -0.4 Td
+(D) Tj
+ET
+    6.75      2.0 m
+    6.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    6.85      2.6 Td
+     0.0     -0.4 Td
+(F) Tj
+ET
+    7.75      2.0 m
+    7.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    7.85      2.6 Td
+     0.0     -0.4 Td
+(G) Tj
+ET
+    8.75      2.0 m
+    8.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    8.85      2.6 Td
+     0.0     -0.4 Td
+(H) Tj
+ET
+    9.75      2.0 m
+    9.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    9.85      2.6 Td
+     0.0     -0.4 Td
+(J) Tj
+ET
+   10.75      2.0 m
+   10.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   10.85      2.6 Td
+     0.0     -0.4 Td
+(K) Tj
+ET
+   11.75      2.0 m
+   11.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   11.85      2.6 Td
+     0.0     -0.4 Td
+(L) Tj
+ET
+   12.75      2.0 m
+   12.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   12.85      2.6 Td
+(:) Tj
+     0.0     -0.4 Td
+(;) Tj
+ET
+   13.75      2.0 m
+   13.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   13.85      2.6 Td
+(") Tj
+     0.0     -0.4 Td
+(') Tj
+ET
+   14.75      2.0 m
+   14.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   14.85      2.6 Td
+     0.0     -0.4 Td
+(Return) Tj
+ET
+   16.75      2.0 m
+   16.75      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+   16.85      2.6 Td
+     0.0     -0.4 Td
+(Line) Tj
+ET
+    18.0      2.0 m
+    18.0      3.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      2.6 Td
+     0.0     -0.4 Td
+(End) Tj
+ET
+     0.0      3.0 m
+    20.0      3.0 l
+     0.0      3.0 m
+     0.0      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      3.6 Td
+     0.0     -0.4 Td
+(Local) Tj
+ET
+     2.0      3.0 m
+     2.0      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      3.6 Td
+     0.0     -0.4 Td
+(Tab) Tj
+ET
+     3.5      3.0 m
+     3.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     3.6      3.6 Td
+     0.0     -0.4 Td
+(Q) Tj
+ET
+     4.5      3.0 m
+     4.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     4.6      3.6 Td
+     0.0     -0.4 Td
+(W) Tj
+ET
+     5.5      3.0 m
+     5.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     5.6      3.6 Td
+     0.0     -0.4 Td
+(E) Tj
+ET
+     6.5      3.0 m
+     6.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     6.6      3.6 Td
+     0.0     -0.4 Td
+(R) Tj
+ET
+     7.5      3.0 m
+     7.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     7.6      3.6 Td
+     0.0     -0.4 Td
+(T) Tj
+ET
+     8.5      3.0 m
+     8.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     8.6      3.6 Td
+     0.0     -0.4 Td
+(Y) Tj
+ET
+     9.5      3.0 m
+     9.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     9.6      3.6 Td
+     0.0     -0.4 Td
+(U) Tj
+ET
+    10.5      3.0 m
+    10.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    10.6      3.6 Td
+     0.0     -0.4 Td
+(I) Tj
+ET
+    11.5      3.0 m
+    11.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    11.6      3.6 Td
+     0.0     -0.4 Td
+(O) Tj
+ET
+    12.5      3.0 m
+    12.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    12.6      3.6 Td
+     0.0     -0.4 Td
+(P) Tj
+ET
+    13.5      3.0 m
+    13.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    13.6      3.6 Td
+([) Tj
+     0.0     -0.4 Td
+(\() Tj
+ET
+    14.5      3.0 m
+    14.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    14.6      3.6 Td
+(]) Tj
+     0.0     -0.4 Td
+(\)) Tj
+ET
+    15.5      3.0 m
+    15.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    15.6      3.6 Td
+(Back) Tj
+     0.0     -0.4 Td
+(Space) Tj
+ET
+    16.5      3.0 m
+    16.5      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.6      3.6 Td
+     0.0     -0.4 Td
+(Page) Tj
+ET
+    18.0      3.0 m
+    18.0      4.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      3.6 Td
+     0.0     -0.4 Td
+(Complete) Tj
+ET
+     0.0      4.0 m
+    20.0      4.0 l
+     0.0      4.0 m
+     0.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      4.6 Td
+     0.0     -0.4 Td
+(Network) Tj
+ET
+     2.0      4.0 m
+     2.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      4.6 Td
+     0.0     -0.4 Td
+(:) Tj
+ET
+     3.0      4.0 m
+     3.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     3.1      4.6 Td
+(!) Tj
+     0.0     -0.4 Td
+(1) Tj
+ET
+     4.0      4.0 m
+     4.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     4.1      4.6 Td
+(@) Tj
+     0.0     -0.4 Td
+(2) Tj
+ET
+     5.0      4.0 m
+     5.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     5.1      4.6 Td
+(#) Tj
+     0.0     -0.4 Td
+(3) Tj
+ET
+     6.0      4.0 m
+     6.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     6.1      4.6 Td
+($) Tj
+     0.0     -0.4 Td
+(4) Tj
+ET
+     7.0      4.0 m
+     7.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     7.1      4.6 Td
+(%) Tj
+     0.0     -0.4 Td
+(5) Tj
+ET
+     8.0      4.0 m
+     8.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     8.1      4.6 Td
+(^) Tj
+     0.0     -0.4 Td
+(6) Tj
+ET
+     9.0      4.0 m
+     9.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     9.1      4.6 Td
+(&) Tj
+     0.0     -0.4 Td
+(7) Tj
+ET
+    10.0      4.0 m
+    10.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    10.1      4.6 Td
+(*) Tj
+     0.0     -0.4 Td
+(8) Tj
+ET
+    11.0      4.0 m
+    11.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    11.1      4.6 Td
+(\() Tj
+     0.0     -0.4 Td
+(9) Tj
+ET
+    12.0      4.0 m
+    12.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    12.1      4.6 Td
+(\)) Tj
+     0.0     -0.4 Td
+(0) Tj
+ET
+    13.0      4.0 m
+    13.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    13.1      4.6 Td
+(_) Tj
+     0.0     -0.4 Td
+(-) Tj
+ET
+    14.0      4.0 m
+    14.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    14.1      4.6 Td
+(+) Tj
+     0.0     -0.4 Td
+(=) Tj
+ET
+    15.0      4.0 m
+    15.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    15.1      4.6 Td
+(~) Tj
+     0.0     -0.4 Td
+(`) Tj
+ET
+    16.0      4.0 m
+    16.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.1      4.6 Td
+({) Tj
+     0.0     -0.4 Td
+(\\) Tj
+ET
+    17.0      4.0 m
+    17.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    17.1      4.6 Td
+(}) Tj
+     0.0     -0.4 Td
+(|) Tj
+ET
+    18.0      4.0 m
+    18.0      5.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      4.6 Td
+     0.0     -0.4 Td
+(Help) Tj
+ET
+     0.0      5.0 m
+    20.0      5.0 l
+     0.0      5.0 m
+     0.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     0.1      5.6 Td
+     0.0     -0.4 Td
+(Function) Tj
+ET
+     2.0      5.0 m
+     2.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     2.1      5.6 Td
+     0.0     -0.4 Td
+(Escape) Tj
+ET
+     4.0      5.0 m
+     4.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     4.1      5.6 Td
+     0.0     -0.4 Td
+(Refresh) Tj
+ET
+     6.0      5.0 m
+     6.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     6.1      5.6 Td
+     0.0     -0.4 Td
+(Square) Tj
+ET
+     8.0      5.0 m
+     8.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+     8.1      5.6 Td
+     0.0     -0.4 Td
+(Circle) Tj
+ET
+    10.0      5.0 m
+    10.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    10.1      5.6 Td
+     0.0     -0.4 Td
+(Triangle) Tj
+ET
+    12.0      5.0 m
+    12.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    12.1      5.6 Td
+(Clear) Tj
+     0.0     -0.4 Td
+(Input) Tj
+ET
+    14.0      5.0 m
+    14.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    14.1      5.6 Td
+     0.0     -0.4 Td
+(Suspend) Tj
+ET
+    16.0      5.0 m
+    16.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    16.1      5.6 Td
+     0.0     -0.4 Td
+(Resume) Tj
+ET
+    18.0      5.0 m
+    18.0      6.0 l
+ S
+BT
+/CLF103 0.30 Tf
+    18.1      5.6 Td
+     0.0     -0.4 Td
+(Abort) Tj
+ET
+     0.0      6.0 m
+    20.0      6.0 l
+ S
+    20.0      6.0 m
+    20.0      0.0 l
+ S
+Q
+
+endstream
+ endobj
+7 0 obj
+<< /Title (Symbolics keyboard layout)
+/Parent 3 0 R
+/Dest [ 5 0 R /Fit ]
+/Count 0
+ >>
+ endobj
+8 0 obj
+<< /Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+ >>
+ endobj
+9 0 obj
+<< /Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+ >>
+ endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000076 00000 n 
+0000000137 00000 n 
+0000000211 00000 n 
+0000000293 00000 n 
+0000000529 00000 n 
+0000044707 00000 n 
+0000044809 00000 n 
+0000044913 00000 n 
+trailer
+<< /Size 10
+/Root 1 0 R /Info 4 0 R
+>>
+startxref
+45012
+%%EOF
