@@ -1,20 +1,50 @@
-;; -*- Lisp -*-
+;;; -*- Lisp -*-
 
-;; Layout generation tools for Symbolics kbdbabel.
+;;; Layout generation tools for Symbolics kbdbabel.
 
-;; MAKE-KEYMAP generates a keymap suitable to be included in the kbdbabel assembler source
-;; DRAW-KEYBOARD generates a PDF file documenting the mapping as generated
+;;; MAKE-KEYMAP generates a keymap suitable to be included in the kbdbabel assembler source
+;;; DRAW-KEYBOARD generates a PDF file documenting the mapping as generated
 
-;; Depends on :CL-PDF, :ALEXANDRIA and :CL-PPCRE
+;;; This file is meant to be LOADed
+;;; Depends on :CL-PDF, :ALEXANDRIA and :CL-PPCRE
 
-;; Written 2008 by Hans Huebner
-;; Placed in the public domain
+;;; Copyright 2008 by Hans Huebner, All Rights Reserved 
+
+;;; Redistribution and use in source and binary forms, with or without
+;;; modification, are permitted provided that the following conditions
+;;; are met:
+
+;;;   * Redistributions of source code must retain the above copyright
+;;;     notice, this list of conditions and the following disclaimer.
+
+;;;   * Redistributions in binary form must reproduce the above
+;;;     copyright notice, this list of conditions and the following
+;;;     disclaimer in the documentation and/or other materials
+;;;     provided with the distribution.
+
+;;; THIS SOFTWARE IS PROVIDED BY THE AUTHOR 'AS IS' AND ANY EXPRESSED
+;;; OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+;;; WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+;;; ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+;;; DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+;;; DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+;;; GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+;;; INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+;;; WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+;;; NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+;;; SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 (in-package :cl-user)
+
+(asdf:oos 'asdf:load-op :cl-pdf)
+(asdf:oos 'asdf:load-op :alexandria)
+(asdf:oos 'asdf:load-op :cl-ppcre)
 
 (defpackage :symbolics-keyboard
   (:nicknames "SKBD")
   (:use :cl :alexandria))
+
+(setf pdf:*compress-streams* nil)
 
 (in-package :symbolics-keyboard)
 
@@ -25,6 +55,7 @@
     ("Suspend" 		"F4")
     ("Resume" 		"F5")
     ("Abort" 		"F6")
+    ("Local"		"WindowsL")
     ("SuperL" 		"F7")
     ("HyperL" 		"F8")
     ("Scroll" 		"F9" 	"PgDn")
@@ -166,7 +197,10 @@
     ("Right"		#xe0 #x74)
     ("Up"		#xe0 #x75)
     ("PgDn"		#xe0 #x7a)
-    ("PgUp"		#xe0 #x7d)))
+    ("PgUp"		#xe0 #x7d)
+    ("WindowsL"		#xe0 #x1f)
+    ("WindowsR"		#xe0 #x27)
+    ("App"		#xe0 #x2f)))
 
 (defparameter *symbolics-map*
   '(("Function"		#x43	0 5 2)
@@ -360,8 +394,8 @@
            (find-direct-mapping symbolics-keyname))))
 
 (defun f-mode-key-p (symbolics-key-entry)
-  "Return a true value if the key desribed by SYMBOLICS-KEY-ENTRY is a F-mode switch."
-  (member (key-name symbolics-key-entry) '("Local" "ModeLock") :test #'equal))
+  "Return a true value if the key desribed by SYMBOLICS-KEY-ENTRY is the F-mode switch."
+  (equal (key-name symbolics-key-entry) "ModeLock"))
 
 (defun make-keymap ()
   "Print mapping definition arrays in assembler format to
@@ -468,8 +502,6 @@ representing the PS/2 scan code of the key."
   (cond
     ((equal "ModeLock" (car entry))
      '("F-Mode" "Lock"))
-    ((equal "Local" (car entry))
-     '("F-Mode"))
     (t
      (let ((scan-codes (map-symbolics-key (key-name entry) f-mode)))
        (split-label (or (car (find scan-codes *ps2-map* :key #'cdr :test #'equal))
