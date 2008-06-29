@@ -1,0 +1,8 @@
+Windows scan code mapping functionality:
+
+http://www.microsoft.com/whdc/archive/w2kscan-map.mspx
+
+Key Support, Keyboard Scan Codes, and Windows:
+
+http://www.microsoft.com/whdc/archive/scancode.mspx
+
