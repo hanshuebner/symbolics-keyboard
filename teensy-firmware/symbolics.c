@@ -46,6 +46,8 @@
 #define NUM_KEY_RIGHT_SHIFT 5
 #define NUM_KEY_RIGHT_ALT   6
 #define NUM_KEY_RIGHT_GUI   7
+#define NUM_KEY_LOCAL       8
+#define NUM_KEY_F_MODE      9
 
 #include "keymap.inc"
 
@@ -88,11 +90,43 @@ poll_keyboard(uint8_t* state)
 }
 
 void
+jump_to_loader(void)
+{
+  // Jump to the HalfKay (or any other) boot loader
+  USBCON = 0;
+  asm("jmp 0x3000");
+}
+
+void
+handle_local_keys(void)
+{
+  // Local processing.  LOCAL acts as a modifier key that can be used to execute in the keyboard controller.
+
+  // If more than one key is pressed, do nothing
+  for (int i = 1; i < sizeof keyboard_keys; i++) {
+    if (keyboard_keys[i]) {
+      return;
+    }
+  }
+
+  // Evaluate key press.
+  switch (keyboard_keys[0]) {
+  case KEY_B:
+    jump_to_loader();
+  }
+}
+
+void
 send_keys(uint8_t* state)
 {
   uint8_t key_index = 0;
   uint8_t map_index = 0;
+  uint8_t local = 0;
+  const uint8_t* keymap = keymap_normal;
 
+ retry:
+  // If we detect that we are in f-mode, we need to translate the
+  // pressed keys with the f-mode translation table.
   keyboard_modifier_keys = 0;
   memset(keyboard_keys, 0, sizeof keyboard_keys);
 
@@ -112,7 +146,31 @@ send_keys(uint8_t* state)
 #endif
       if (pressed && mapped) {
         if (mapped & 0x80) {
-          keyboard_modifier_keys |= 1 << (mapped & 0x7F);
+          int num = mapped & 0x7F;
+          switch (num) {
+
+          case NUM_KEY_LEFT_CTRL:
+          case NUM_KEY_LEFT_SHIFT:
+          case NUM_KEY_LEFT_ALT:
+          case NUM_KEY_LEFT_GUI:
+          case NUM_KEY_RIGHT_CTRL:
+          case NUM_KEY_RIGHT_SHIFT:
+          case NUM_KEY_RIGHT_ALT:
+          case NUM_KEY_RIGHT_GUI:
+            keyboard_modifier_keys |= 1 << num;
+            break;
+
+          case NUM_KEY_LOCAL:
+            local = 1;
+            break;
+
+          case NUM_KEY_F_MODE:
+            if (keymap == keymap_normal) {
+              keymap = keymap_f_mode;
+              goto retry;
+            }
+            break;
+          }
         } else {
           if (key_index < sizeof keyboard_keys) {
             keyboard_keys[key_index++] = mapped;
@@ -123,9 +181,13 @@ send_keys(uint8_t* state)
     }
   }
 
+  if (local) {
+    handle_local_keys();
+  } else {
 #if !defined(DEBUG)
-  usb_keyboard_send();
+    usb_keyboard_send();
 #endif
+  }
 }
 
 int

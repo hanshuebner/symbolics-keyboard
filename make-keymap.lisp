@@ -55,7 +55,6 @@
     ("Suspend" 		"F4")
     ("Resume" 		"F5")
     ("Abort" 		"F6")
-    ("Local"		"WindowsL")
     ("SuperL" 		"F7")
     ("HyperL" 		"F8")
     ("Scroll" 		"F9" 	"PgDn")
@@ -303,8 +302,10 @@
     ("Up"		"KEY_UP")
     ("PgDn"		"KEY_PAGE_DOWN")
     ("PgUp"		"KEY_PAGE_UP")
+    ("Local"            "NUM_KEY_LOCAL")
     ("WindowsL"		"NUM_KEY_LEFT_GUI")
-    ("WindowsR"		"NUM_KEY_RIGHT_GUI")))
+    ("WindowsR"		"NUM_KEY_RIGHT_GUI")
+    ("ModeLock"         "NUM_KEY_F_MODE")))
 
 (defparameter *symbolics-map*
   '(("Function"		#x43	0 5 2)
@@ -546,7 +547,7 @@
 
 (defun define-key/usb (symbolics-scancode usb-keycode map)
   (setf (aref map symbolics-scancode)
-        (if (cl-ppcre:scan "NUM_KEY_(LEFT|RIGHT)_(SHIFT|CTRL|ALT|GUI)" usb-keycode)
+        (if (cl-ppcre:scan "^NUM_.*" usb-keycode)
             (format nil "0x80 | ~A" usb-keycode)
             usb-keycode)))
 
@@ -582,8 +583,8 @@
           (t
            (push symbolics-keyname unmapped-symbolics-keys)))))
     (with-open-file (*standard-output* filename :direction :output :if-exists :supersede)
-      (dump-usb-map normal-map "keymap")
-      (dump-usb-map f-mode-map "keymap_f"))
+      (dump-usb-map normal-map "keymap_normal")
+      (dump-usb-map f-mode-map "keymap_f_mode"))
     (when unmapped-symbolics-keys
       (format t "Unmapped Symbolics keys: ~S~%" unmapped-symbolics-keys))
     (when unmapped-usb-keys

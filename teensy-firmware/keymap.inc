@@ -1,13 +1,13 @@
-const uint8_t keymap[128] PROGMEM = {
+const uint8_t keymap_normal[128] PROGMEM = {
     0,
-    0x80 | NUM_KEY_LEFT_GUI,
+    0x80 | NUM_KEY_LOCAL,
     KEY_CAPS_LOCK,
     KEY_F8,
     0x80 | NUM_KEY_LEFT_ALT,
     0x80 | NUM_KEY_RIGHT_CTRL,
     KEYPAD_PERIOD,
     KEY_F9,
-    0,
+    0x80 | NUM_KEY_F_MODE,
     0,
     0,
     0,
@@ -128,16 +128,16 @@ const uint8_t keymap[128] PROGMEM = {
     0,
     0
 };
-const uint8_t keymap_f[128] PROGMEM = {
+const uint8_t keymap_f_mode[128] PROGMEM = {
     0,
-    0x80 | NUM_KEY_LEFT_GUI,
+    0x80 | NUM_KEY_LOCAL,
     KEY_CAPS_LOCK,
     KEY_F8,
     0x80 | NUM_KEY_LEFT_ALT,
     0x80 | NUM_KEY_RIGHT_CTRL,
     KEY_DOWN,
     KEY_PAGE_DOWN,
-    0,
+    0x80 | NUM_KEY_F_MODE,
     0,
     0,
     0,
