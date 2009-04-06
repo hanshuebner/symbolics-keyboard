@@ -572,12 +572,13 @@
              (usb-keycode (map-symbolics->usb symbolics-keyname))
              (f-mode-usb-keycode (map-symbolics->usb symbolics-keyname t)))
         (cond
-          (usb-keycode
-           (setf unmapped-usb-keys (remove usb-keycode unmapped-usb-keys :key #'cadr :test #'equal))
-           (define-key/usb symbolics-scancode usb-keycode normal-map))
-          (f-mode-usb-keycode
-           (setf unmapped-usb-keys (remove f-mode-usb-keycode unmapped-usb-keys :key #'cadr :test #'equal))
-           (define-key/usb symbolics-scancode f-mode-usb-keycode f-mode-map))
+          ((or usb-keycode f-mode-usb-keycode)
+           (when usb-keycode
+             (setf unmapped-usb-keys (remove usb-keycode unmapped-usb-keys :key #'cadr :test #'equal))
+             (define-key/usb symbolics-scancode usb-keycode normal-map))
+           (when f-mode-usb-keycode
+             (setf unmapped-usb-keys (remove f-mode-usb-keycode unmapped-usb-keys :key #'cadr :test #'equal))
+             (define-key/usb symbolics-scancode f-mode-usb-keycode f-mode-map)))
           (t
            (push symbolics-keyname unmapped-symbolics-keys)))))
     (with-open-file (*standard-output* filename :direction :output :if-exists :supersede)
