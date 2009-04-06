@@ -119,68 +119,70 @@ handle_local_keys(void)
 void
 send_keys(uint8_t* state)
 {
-  uint8_t key_index = 0;
-  uint8_t map_index = 0;
   uint8_t local = 0;
   const uint8_t* keymap = keymap_normal;
 
  retry:
   // If we detect that we are in f-mode, we need to translate the
   // pressed keys with the f-mode translation table.
-  keyboard_modifier_keys = 0;
-  memset(keyboard_keys, 0, sizeof keyboard_keys);
+  {
+    uint8_t key_index = 0;
+    uint8_t map_index = 0;
+    keyboard_modifier_keys = 0;
+    memset(keyboard_keys, 0, sizeof keyboard_keys);
 
-  for (int i = 0; i < 16; i++) {
-    uint8_t buf = state[i];
-    for (int j = 0; j < 8; j++) {
-      uint8_t mapped = pgm_read_byte(&keymap[map_index++]);
-      uint8_t pressed = (buf & 1);
+    for (int i = 0; i < 16; i++) {
+      uint8_t buf = state[i];
+      for (int j = 0; j < 8; j++) {
+        uint8_t mapped = pgm_read_byte(&keymap[map_index++]);
+        uint8_t pressed = (buf & 1);
 #if defined(DEBUG)
-      if (pressed) {
-        print("key ");
-        phex(map_index - 1);
-        print(" pressed, mapped to ");
-        phex(mapped);
-        print("\n");
-      }
+        if (pressed) {
+          print("key ");
+          phex(map_index - 1);
+          print(" pressed, mapped to ");
+          phex(mapped);
+          print("\n");
+        }
 #endif
-      if (pressed && mapped) {
-        if (mapped & 0x80) {
-          int num = mapped & 0x7F;
-          switch (num) {
+        if (pressed && mapped) {
+          if (mapped & 0x80) {
+            int num = mapped & 0x7F;
+            switch (num) {
 
-          case NUM_KEY_LEFT_CTRL:
-          case NUM_KEY_LEFT_SHIFT:
-          case NUM_KEY_LEFT_ALT:
-          case NUM_KEY_LEFT_GUI:
-          case NUM_KEY_RIGHT_CTRL:
-          case NUM_KEY_RIGHT_SHIFT:
-          case NUM_KEY_RIGHT_ALT:
-          case NUM_KEY_RIGHT_GUI:
-            keyboard_modifier_keys |= 1 << num;
-            break;
+            case NUM_KEY_LEFT_CTRL:
+            case NUM_KEY_LEFT_SHIFT:
+            case NUM_KEY_LEFT_ALT:
+            case NUM_KEY_LEFT_GUI:
+            case NUM_KEY_RIGHT_CTRL:
+            case NUM_KEY_RIGHT_SHIFT:
+            case NUM_KEY_RIGHT_ALT:
+            case NUM_KEY_RIGHT_GUI:
+              keyboard_modifier_keys |= 1 << num;
+              break;
 
-          case NUM_KEY_LOCAL:
-            local = 1;
-            break;
+            case NUM_KEY_LOCAL:
+              local = 1;
+              break;
 
-          case NUM_KEY_F_MODE:
-            if (keymap == keymap_normal) {
-              keymap = keymap_f_mode;
-              goto retry;
+            case NUM_KEY_F_MODE:
+              if (keymap == keymap_normal) {
+                keymap = keymap_f_mode;
+                goto retry;
+              }
+              break;
             }
-            break;
-          }
-        } else {
-          if (key_index < sizeof keyboard_keys) {
-            keyboard_keys[key_index++] = mapped;
+          } else {
+            if (key_index < sizeof keyboard_keys) {
+              keyboard_keys[key_index++] = mapped;
+            }
           }
         }
+        buf >>= 1;
       }
-      buf >>= 1;
     }
   }
-
+  
   if (local) {
     handle_local_keys();
   } else {
