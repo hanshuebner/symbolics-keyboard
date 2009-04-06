@@ -1,0 +1,343 @@
+gelb - input 11 - clock
+rot - vcc      
+gruen - output 12 - data
+-     vcc       
+blau - input 3 - clear
+schwarz - input 1  - nc
+duenn-weiss -\
+weiss - masse |
+duenn-weiss -/
+
+
+telefon:
+
+rechts nach links mit pin unten
+weiss - schwarz - rot - gruen - gelb - blau
+GND - NC - VCC - DATA - CLK - CLR
+
+blau - masse
+gelb - nc
+gruen - vcc
+rot - data
+schwarz - clk 
+weiss  - clr
+
+;; -*- text -*-
+;
+; keyconv - convert symbolics keyboard to ps/2 interface
+
+; written 2003 by hans huebner
+;
+; target device: atmel at90s2313, 4 mhz
+
+; ports:
+;
+; pd0/1		serial port
+;
+; pb0	output	symbolics - clear
+; pb1	output	symbolics - clock
+; pb2	input	symbolics - data
+
+.include "C:\Programme\Atmel\AVR Studio\Appnotes\2313def.inc"
+
+.listmac
+
+.DSEG
+
+inbuf:
+	.byte	16
+inbuf_end:
+previous_state:
+	.byte	16
+
+.CSEG
+.org $000				;Interrupt vector routines
+	rjmp 	reset			; 1 - reset entry vector
+	reti				; 2
+	reti				; 3
+	reti				; 4
+	reti				; 5
+	reti				; 6
+	reti				; 7
+	reti				; 8
+	reti				; 9
+	reti				; 10
+;	rjmp	serial_sent		; 10
+	reti				; 11
+	
+;;;
+;;; register variables
+;;;
+
+.def	temp	        =r16	; temporary, used in initialization and isr
+.def	count		=r17
+.def	value		=r18
+.def	key_num		=r19
+.def	bytes_left	=r20
+.def	changed		=r21
+.def	bits		=r22
+	
+;; delay variables
+	
+.def	delay1		=r23
+.def	delay2		=r24
+.def	delay3		=r25
+
+;;;
+;;; port bit symbols
+;;;
+
+.equ	direction_mask	= 0b1110011
+
+.equ	symbolics_clear	=0
+.equ	symbolics_clock	=1
+.equ	symbolics_data	=2
+
+.equ	baud96		=25			; 9600 baud constant for 4Mhz crystal
+
+ser_out:
+	sbis	usr, udre
+	rjmp	ser_out
+
+	out	udr, temp
+	ret
+	
+;;;
+;;; read_keyboard -- all keys from the keyboard into inbuf
+;;;
+
+read_keyboard:
+	ldi	yl, low(inbuf)
+	cbi	portb, symbolics_clear
+	sbi	portb, symbolics_clear
+read_byte:
+	ldi	count, 8
+	ldi	value, 0
+loop:
+	cbi	portb, symbolics_clock
+	sbi	portb, symbolics_clock
+	clc					; clear carry - will be rotated into the value byte
+	sbic	pinb, symbolics_data
+	sec					; bit was set - set carry
+	rol	value				; and rotate carry into value byte
+	dec	count				; decrement bit counter
+	brne	loop				; loop until 8 bits read
+	st	y+, value			; save value into input buffer
+	cpi	yl, low(inbuf_end)		; last byte read?
+	brne	read_byte			; no, continue
+
+	ret
+
+;;; 
+;;; nibble_to_ascii - convert temp to ascii value of it's lower nibble
+;;; 
+nibble_to_ascii:
+	subi	temp, LOW(-'0')					; addi '0'
+	cpi	temp, LOW('9' + 1)				; perform ascii adjustment
+	brlt	n2a_cont					; < 10 => skip
+	subi	temp, LOW('9' + 1 - 'A')			; >= 10 => add additional offset in ascii table
+n2a_cont:
+	ret
+	
+
+;;;
+;;; analyze_keyboard -- check key state in inbuf and report all key presses / releases
+;;;
+analyze_keyboard:
+	clr	key_num
+	ldi	bytes_left, 16
+	clr	yh
+	ldi	yl, low(inbuf)
+	clr	xh
+	ldi	xl, low(previous_state)
+analyze_next_byte:
+	ld	changed, x+
+	ld	value, y+
+	eor	changed, value
+	clr	bits
+anal_bit_loop:
+	ror	changed
+	brcc	bit_not_changed
+	;; bit has changed
+	ldi	temp, '0'
+	ror	value
+	brcc	out_key
+	ldi	temp, '1'
+out_key:
+	rcall	ser_out
+	mov	temp, key_num
+	swap	temp						; store upper nibble
+	andi	temp, 0x0f
+	rcall	nibble_to_ascii
+	rcall	ser_out
+	mov	temp, key_num
+	andi	temp, 0x0f
+	rcall	nibble_to_ascii
+	rcall	ser_out
+	ldi	temp, 13
+	rcall	ser_out
+	ldi	temp, 10
+	rcall	ser_out
+	rjmp	prepare_next_key
+
+bit_not_changed:
+	ror	value
+prepare_next_key:
+	inc	key_num
+	inc	bits
+	cpi	bits, 8
+	brne	anal_bit_loop
+	dec	bytes_left
+	brne	analyze_next_byte
+	;; kopieren des aktuellen zustands
+	clr	yh
+	ldi	yl, low(inbuf)
+	clr	xh
+	ldi	xl, low(previous_state)
+	ldi	bytes_left, 16
+copy_loop:
+	ld	temp, y+
+	st	x+, temp
+	dec	bytes_left
+	brne	copy_loop
+	ret
+;;; 
+;;; reset entry point
+;;;
+	
+reset:
+	; initialize stack
+        ldi 	temp, low(ramend)
+        out 	spl,temp
+
+	; initialize i/o port b
+	ldi	temp, 0b0000011
+	out	ddrb, temp
+
+	; enable pullup on input
+	ldi	temp, 0b0000100
+	out	portb, temp
+
+	; set up uart
+;	ldi 	temp, 0b01001000				; enable TX and TX complete interrupt
+	ldi 	temp, 0b00001000				; enable TX
+	out 	ucr, temp
+	ldi	temp, baud96					; set baud rate to 9600 bps
+	out	ubrr, temp
+
+main_loop:
+	rcall	read_keyboard
+	rcall	analyze_keyboard
+	rjmp	main_loop
+
+;
+;
+; delay code written by avrdelayloop.exe:
+;
+delayhalfsecond:
+;	ret							; xxx for testing
+; ============================= 
+;   Warteschleifen-Generator 
+;     2000000 Zyklen:
+; ----------------------------- 
+; warte 1999998 Zyklen:
+          ldi  delay1, $12
+WGLOOP0:  ldi  delay2, $BC
+WGLOOP1:  ldi  delay3, $C4
+WGLOOP2:  dec  delay3
+          brne WGLOOP2
+          dec  delay2
+          brne WGLOOP1
+          dec  delay1
+          brne WGLOOP0
+	ret
+delaytenth:
+; wait for about the tenth of a second
+          ldi  delay1, $04
+WGLOOP0a:  ldi  delay2, $BC
+WGLOOP1a:  ldi  delay3, $C4
+WGLOOP2a:  dec  delay3
+          brne WGLOOP2a
+          dec  delay2
+          brne WGLOOP1a
+          dec  delay1
+          brne WGLOOP0a
+	ret
+
+;;; keyboard_table maps symbolics key codes to IBM key codes.  key codes
+;;; which are extended in the IBM sense have their 8th bit set.
+
+keyboard_table:
+;;; 0x00
+.DB            0, 0x14 + 0x80 ;                        | R-Control
+.DB         0x11,           0 ; L-Meta mapped to L-Alt | 
+.DB         0x04,           0 ; Caps                   | 
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+;;; 0x10
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+.DB            0, 0x11 + 0x80 ;                        | R-Meta mapped to R-Alt
+.DB         0x29,        0x14 ; Space                  | L-Control
+.DB         0x1B,           0 ; S                      | 
+.DB         0x59,        0x49 ; R-Shift                | .
+.DB         0x3A,        0x32 ; M                      | B
+.DB         0x21,        0x1A ; C                      | Z
+;;; 0x20
+.DB         0x41,        0x31 ; ,                      | N
+.DB         0x2A,        0x22 ; V                      | X
+.DB         0x12,           0 ; L-Shift                | 
+.DB            0,           0 ;                        | 
+.DB         0x52,           0 ; '                      | 
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+.DB            0,        0x4A ;                        | /
+;;; 0x30
+.DB            0,           0 ;                        | 
+.DB            0,        0x5A ;                        | Return
+.DB         0x4C,        0x42 ; ;                      | K
+.DB         0x33,        0x2B ; H                      | F
+.DB         0x0D,        0x4B ; Tab                    | L
+.DB         0x3B,        0x34 ; J                      | G
+.DB         0x23,        0x1C ; D                      | A
+.DB            0,           0 ;                        | 
+;;; 0x40
+.DB         0x35,        0x2D ; Y                      | R
+.DB         0x1D,           0 ; W                      | 
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+.DB         0x45,           0 ; 0                      | 
+.DB            0,           0 ;                        | 
+.DB            0,        0x5B ;                        | ) mapped to ]
+.DB         0x4D,        0x43 ; P                      | I
+;;; 0x50
+.DB            0,        0x66 ;                        | Backspace
+.DB         0x54,        0x44 ; ( mapped to [          | O
+.DB         0x3C,        0x2C ; U                      | T
+.DB         0x24,        0x15 ; E                      | Q
+.DB            0,        0x3E ;                        | 8
+.DB         0x36,        0x2E ; 6                      | 5
+.DB         0x1E,           0 ; 2                      | 
+.DB            0,           0 ;                        | 
+;;; 0x60
+.DB            0,        0x26 ;                        | 3
+.DB         0x16,           0 ; 1                      | 
+.DB            0,           0 ;                        | 
+.DB         0x5D,        0x55 ; \                      | =
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+.DB         0x0E,        0x4E ; `                      | -
+.DB         0x46,        0x3D ; 9                      | 7
+;;; 0x70
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+.DB            0,           0 ;                        | 
+

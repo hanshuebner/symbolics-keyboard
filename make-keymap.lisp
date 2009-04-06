@@ -202,6 +202,110 @@
     ("WindowsR"		#xe0 #x27)
     ("App"		#xe0 #x2f)))
 
+(defparameter *usb-map*
+  '(("F9"		"KEY_F9")
+    ("F5"	 	"KEY_F5")
+    ("F3"		"KEY_F3")
+    ("F1"		"KEY_F1")
+    ("F2"		"KEY_F2")
+    ("F12"		"KEY_F12")
+    ("F10"		"KEY_F10")
+    ("F8"		"KEY_F8")
+    ("F6"		"KEY_F6")
+    ("F4"		"KEY_F4")
+    ("Tab"		"KEY_TAB")
+    ("`"		"KEY_TILDE")
+    ("AltL"		"NUM_KEY_LEFT_ALT")
+    ("ShiftL"		"NUM_KEY_LEFT_SHIFT")
+    ("CtrlL"		"NUM_KEY_LEFT_CTRL")
+    ("Q"		"KEY_Q")
+    ("1"		"KEY_1")
+    ("Z"		"KEY_Z")
+    ("S"		"KEY_S")
+    ("A"		"KEY_A")
+    ("W"		"KEY_W")
+    ("2"		"KEY_2")
+    ("C"		"KEY_C")
+    ("X"		"KEY_X")
+    ("D"		"KEY_D")
+    ("E"		"KEY_E")
+    ("4"		"KEY_4")
+    ("3"		"KEY_3")
+    ("Space"		"KEY_SPACE")
+    ("V"		"KEY_V")
+    ("F"		"KEY_F")
+    ("T"		"KEY_T")
+    ("R"		"KEY_R")
+    ("5"		"KEY_5")
+    ("N"		"KEY_N")
+    ("B"		"KEY_B")
+    ("H"		"KEY_H")
+    ("G"		"KEY_G")
+    ("Y"		"KEY_Y")
+    ("6"		"KEY_6")
+    ("M"		"KEY_M")
+    ("J"		"KEY_J")
+    ("U"		"KEY_U")
+    ("7"		"KEY_7")
+    ("8"		"KEY_8")
+    (","		"KEY_COMMA")
+    ("K"		"KEY_K")
+    ("I"		"KEY_I")
+    ("O"		"KEY_O")
+    ("0"		"KEY_0")
+    ("9"		"KEY_9")
+    ("."		"KEY_PERIOD")
+    ("/"		"KEY_SLASH")
+    ("L"		"KEY_L")
+    (";"		"KEY_SEMICOLON")
+    ("P"		"KEY_P")
+    ("-"		"KEY_MINUS")
+    ("KP0"		"KEYPAD_0")
+    ("["		"KEY_LEFT_BRACE")
+    ("="		"KEY_EQUAL")
+    ("Caps"		"KEY_CAPS_LOCK")
+    ("ShiftR"		"NUM_KEY_RIGHT_SHIFT")
+    ("'"		"KEY_QUOTE")
+    ("Return"		"KEY_ENTER")
+    ("]"		"KEY_RIGHT_BRACE")
+    ("\\"		"KEY_BACKSLASH")
+    ("BackSpace"	"KEY_BACKSPACE")
+    ("KP1"		"KEYPAD_1")
+    ("KP4"		"KEYPAD_4")
+    ("KP7"		"KEYPAD_7")
+    ("KP0"		"KEYPAD_0")
+    ("KP."		"KEYPAD_PERIOD")
+    ("KP2"		"KEYPAD_2")
+    ("KP5"		"KEYPAD_5")
+    ("KP6"		"KEYPAD_6")
+    ("KP8"		"KEYPAD_8")
+    ("Escape"		"KEY_ESC")
+    ("NumLock"		"KEY_NUM_LOCK")
+    ("F11"		"KEY_F11")
+    ("KP+"		"KEYPAD_PLUS")
+    ("KP3"		"KEYPAD_3")
+    ("KP-"		"KEYPAD_MINUS")
+    ("KP*"		"KEYPAD_ASTERIX")
+    ("KP9"		"KEYPAD_9")
+    ("Scroll"		"KEY_SCROLL_LOCK")
+    ("F7"		"KEY_F7")
+    ("AltGr"		"NUM_KEY_RIGHT_ALT")
+    ("CtrlR"		"NUM_KEY_RIGHT_CTRL")
+    ("KP/"		"KEYPAD_SLASH")
+    ("KPEnter"		"KEYPAD_ENTER")
+    ("End"		"KEY_END")
+    ("Left"		"KEY_LEFT")
+    ("Home"		"KEY_HOME")
+    ("Ins"		"KEY_INSERT")
+    ("Del"		"KEY_DELETE")
+    ("Down"		"KEY_DOWN")
+    ("Right"		"KEY_RIGHT")
+    ("Up"		"KEY_UP")
+    ("PgDn"		"KEY_PAGE_DOWN")
+    ("PgUp"		"KEY_PAGE_UP")
+    ("WindowsL"		"NUM_KEY_LEFT_GUI")
+    ("WindowsR"		"NUM_KEY_RIGHT_GUI")))
+
 (defparameter *symbolics-map*
   '(("Function"		#x43	0 5 2)
     ("Escape"		#x6f	1 5 2)
@@ -335,7 +439,7 @@
                                 keys)))
             (nreverse keys))))
 
-(defun find-explicit-mapping (symbolics-keyname &optional f-mode-p)
+(defun find-explicit-mapping (symbolics-keyname f-mode-p map)
   (let ((mapping-entry (assoc symbolics-keyname *key-map* :test #'equal)))
     (when mapping-entry
       (let ((mapping (nth (if f-mode-p 2 1) mapping-entry)))
@@ -344,14 +448,14 @@
            mapping)
           ((or (symbolp mapping)
                (stringp mapping))
-           (or (assoc mapping *ps2-map* :test #'equal)
+           (or (assoc mapping map :test #'equal)
                (error "invalid special key map entry  ~S, PS/2 key ~A not found"
                       mapping-entry mapping)))
           (t
            (error "unexpected mapping value in map definition entry ~S" mapping-entry)))))))
 
-(defun find-direct-mapping (symbolics-keyname)
-  (assoc symbolics-keyname *ps2-map* :test #'equal))
+(defun find-direct-mapping (symbolics-keyname map)
+  (assoc symbolics-keyname map :test #'equal))
 
 ;; bit definitions for flag map
 
@@ -361,7 +465,7 @@
 (defconstant +key-is-switch+ 8)
 (defconstant +f-mode-switch+ 128)
 
-(defun dump-map (map prefix &optional flagsp)
+(defun dump-kbdbabel-map (map prefix &optional flagsp)
   (dotimes (row 8)
     (format t "~A~A	DB	" prefix row)
     (dotimes (col 16)
@@ -374,7 +478,7 @@
     (terpri))
   (terpri))
 
-(defun define-key (symbolics-scancode ps2-keycode map flag-map &optional f-mode-p)
+(defun define-key/ps2 (symbolics-scancode ps2-keycode map flag-map &optional f-mode-p)
   (let ((e0-escape-flag (ash +e0-escape+ (if f-mode-p 4 0))))
     (cond
       ((eql #xe0 (car ps2-keycode))
@@ -386,18 +490,18 @@
              (logand (lognot e0-escape-flag) (aref flag-map symbolics-scancode)))))
   (setf (aref map symbolics-scancode) (car ps2-keycode))))
 
-(defun map-symbolics-key (symbolics-keyname &optional f-mode)
+(defun map-symbolics->ps2 (symbolics-keyname &optional f-mode)
   "Given the name of a symbolics key, return the corresponding PS/2 scan code(s) as a list."
   (cdr (or (when f-mode
-             (find-explicit-mapping symbolics-keyname t))
-           (find-explicit-mapping symbolics-keyname)
-           (find-direct-mapping symbolics-keyname))))
+             (find-explicit-mapping symbolics-keyname t *ps2-map*))
+           (find-explicit-mapping symbolics-keyname nil *ps2-map*)
+           (find-direct-mapping symbolics-keyname *ps2-map*))))
 
 (defun f-mode-key-p (symbolics-key-entry)
   "Return a true value if the key desribed by SYMBOLICS-KEY-ENTRY is the F-mode switch."
   (equal (key-name symbolics-key-entry) "ModeLock"))
 
-(defun make-keymap ()
+(defun make-kbdmabel-keymap ()
   "Print mapping definition arrays in assembler format to
   *standard-output*.  The labels are chosen so that the tables can be
   copied into the kbdlabel assembler source."
@@ -413,25 +517,76 @@
           ((f-mode-key-p symbolics-key-entry)
            (setf (aref flag-map symbolics-scancode) +f-mode-switch+))
           (t
-           (let* ((ps2-keycode (map-symbolics-key symbolics-keyname))
-                  (f-mode-ps2-keycode (map-symbolics-key symbolics-keyname t)))
+           (let* ((ps2-keycode (map-symbolics->ps2 symbolics-keyname))
+                  (f-mode-ps2-keycode (map-symbolics->ps2 symbolics-keyname t)))
              (cond
                ((or ps2-keycode f-mode-ps2-keycode)
                 (when ps2-keycode
                   (setf unmapped-ps2-keys (remove ps2-keycode unmapped-ps2-keys :key #'cdr :test #'equal))
-                  (define-key symbolics-scancode ps2-keycode normal-map flag-map))
+                  (define-key/ps2 symbolics-scancode ps2-keycode normal-map flag-map))
                 (when f-mode-ps2-keycode
                   (setf unmapped-ps2-keys (remove f-mode-ps2-keycode unmapped-ps2-keys :key #'cdr :test #'equal))
-                  (define-key symbolics-scancode f-mode-ps2-keycode f-mode-map flag-map t)))
+                  (define-key/ps2 symbolics-scancode f-mode-ps2-keycode f-mode-map flag-map t)))
                (t
                 (push symbolics-keyname unmapped-symbolics-keys))))))))
-    (dump-map normal-map "Symbolics2ATXlt")
-    (dump-map f-mode-map "Symbolics2ATXltF")
-    (dump-map flag-map "Symbolics2ATXlte" t)
+    (dump-kbdbabel-map normal-map "Symbolics2ATXlt")
+    (dump-kbdbabel-map f-mode-map "Symbolics2ATXltF")
+    (dump-kbdbabel-map flag-map "Symbolics2ATXlte" t)
     (when unmapped-symbolics-keys
       (format t "Unmapped Symbolics keys: ~S~%" unmapped-symbolics-keys))
     (when unmapped-ps2-keys
       (format t "Unmapped PS/2 keys: ~S~%" (mapcar #'car unmapped-ps2-keys)))))
+
+(defun map-symbolics->usb (symbolics-keyname &optional f-mode)
+  "Given the name of a symbolics key, return the corresponding USB scan code(s) as a list."
+  (cadr (or (when f-mode
+              (find-explicit-mapping symbolics-keyname t *usb-map*))
+            (find-explicit-mapping symbolics-keyname nil *usb-map*)
+            (find-direct-mapping symbolics-keyname *usb-map*))))
+
+(defun define-key/usb (symbolics-scancode usb-keycode map)
+  (setf (aref map symbolics-scancode)
+        (if (cl-ppcre:scan "NUM_KEY_(LEFT|RIGHT)_(SHIFT|CTRL|ALT|GUI)" usb-keycode)
+            (format nil "0x80 | ~A" usb-keycode)
+            usb-keycode)))
+
+(defun dump-usb-map (map name)
+  (format t "const uint8_t ~A[128] PROGMEM = {~%" name)
+  (dotimes (i 128)
+    (format t "    ~A~A~%"
+            (aref map i)
+            (if (= i 127) "" ",")))
+  (format t "};~%"))
+
+(defun make-usb-keymap (filename)
+  "Print mapping definition arrays in C format to FILENAME.  The
+  keyboard map is written as C array that can be included by the
+  Teensy based converter code."
+  (let ((normal-map (make-array 128 :initial-element "0"))
+        (f-mode-map (make-array 128 :initial-element "0"))
+        unmapped-symbolics-keys
+        (unmapped-usb-keys *usb-map*))
+    (dolist (symbolics-key-entry *symbolics-map*)
+      (let* ((symbolics-keyname (key-name symbolics-key-entry))
+             (symbolics-scancode (key-scancode symbolics-key-entry))
+             (usb-keycode (map-symbolics->usb symbolics-keyname))
+             (f-mode-usb-keycode (map-symbolics->usb symbolics-keyname t)))
+        (cond
+          (usb-keycode
+           (setf unmapped-usb-keys (remove usb-keycode unmapped-usb-keys :key #'cadr :test #'equal))
+           (define-key/usb symbolics-scancode usb-keycode normal-map))
+          (f-mode-usb-keycode
+           (setf unmapped-usb-keys (remove f-mode-usb-keycode unmapped-usb-keys :key #'cadr :test #'equal))
+           (define-key/usb symbolics-scancode f-mode-usb-keycode f-mode-map))
+          (t
+           (push symbolics-keyname unmapped-symbolics-keys)))))
+    (with-open-file (*standard-output* filename :direction :output :if-exists :supersede)
+      (dump-usb-map normal-map "keymap")
+      (dump-usb-map f-mode-map "keymap_f"))
+    (when unmapped-symbolics-keys
+      (format t "Unmapped Symbolics keys: ~S~%" unmapped-symbolics-keys))
+    (when unmapped-usb-keys
+      (format t "Unmapped USB keys: ~S~%" (mapcar #'car unmapped-usb-keys)))))
 
 (defun draw-keyboard (&optional (label-function #'key-name))
   (pdf:with-saved-state
@@ -495,15 +650,15 @@ to be used as label for the key."
 (defun format-key-scancodes (entry)
   "Given a Symbolics key definition entry, return one or two strings
 representing the PS/2 scan code of the key."
-  (list (format nil "~{~2,'0X~^ ~}" (map-symbolics-key (key-name entry)))
-        (format nil "~{~2,'0X~^ ~}" (map-symbolics-key (key-name entry) t))))
+  (list (format nil "~{~2,'0X~^ ~}" (map-symbolics->ps2 (key-name entry)))
+        (format nil "~{~2,'0X~^ ~}" (map-symbolics->ps2 (key-name entry) t))))
 
 (defun format-key-ps2-name (entry &optional f-mode)
   (cond
     ((equal "ModeLock" (car entry))
      '("F-Mode" "Lock"))
     (t
-     (let ((scan-codes (map-symbolics-key (key-name entry) f-mode)))
+     (let ((scan-codes (map-symbolics->ps2 (key-name entry) f-mode)))
        (split-label (or (car (find scan-codes *ps2-map* :key #'cdr :test #'equal))
                         ""))))))
 
@@ -519,7 +674,8 @@ representing the PS/2 scan code of the key."
     (pdf:with-page ()
       (pdf:with-outline-level ("Symbolics keyboard layout" (pdf:register-page-reference))
         (draw-label 70 800 "kbdbabel-symbolics Symbolics to PS/2 Adapter key code mapping" :size 14)
-        (draw-label 240 10 "kbdbabel for Symbolics keyboard - by Alexander Kurz and Hans Hübner - http://kbdbabel.net/"
+        (draw-label 240 10 (format nil "kbdbabel for Symbolics keyboard - by Alexander Kurz and Hans H~Cbner - http://kbdbabel.net/"
+                                   (code-char 252))
                     :size 8 :font-name "Helvetica")
         (draw-label 70 35 "PS/2 scan codes (top: standard, bottom: F-mode)")
         (pdf:translate 0 50)
