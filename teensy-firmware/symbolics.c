@@ -1,28 +1,15 @@
 // -*- C++ -*- (this is really C)
 
-// Symbolics keyboard adapter, based on Teensy keyboard example.
+// -*- C++ -*-
 
-// The Symbolics keyboard acts as a shift register with 128 bits.  The
-// hardware interface consists of a clear line which is used to signal
-// the beginning of a read cycle, a clock line, and a data line.  All
-// signals are active low.  The keyboard changes the data line on the
-// rising edge of the clock.  It should be read near the falling edge
-// of the clock by the host.
+// Symbolics keyboard to USB adapter
 
-// The keyboard needs to be interfaced to the Teensy board as
-// follows. The wire colors specified are those used in the original
-// modular cable supplied with the keyboard:
-//
-// blue  5V
-// green GND
-// red   D4   DIN
-// black D5   CLK
-// white D6   CLR
+// See the README.txt file for documentation
 
-// The keyboard implements two locking functions, caps lock and mode
-// lock.  Both of these are implemented as switches, not as buttons,
-// so precautions must be made to synchronize their state to the
-// host's caps lock state.
+// Copyright 2009 by Hans Huebner (hans.huebner@gmail.com).
+// Additional copyrights apply.
+
+// This is the original copyright notice for this file:
 
 /* Keyboard example for Teensy USB Development Board
  * http://www.pjrc.com/teensy/usb_keyboard.html
@@ -87,6 +74,8 @@
 void
 init_keyboard_interface(void)
 {
+  // Initialize I/O ports used to interface to the keyboard
+  
   DDRD = MASK_CLOCK | MASK_CLEAR;
   PORTD = MASK_CLOCK | MASK_CLEAR | MASK_DIN;
 }
@@ -94,30 +83,34 @@ init_keyboard_interface(void)
 void
 poll_keyboard(uint8_t* state)
 {
-    PORTD &= ~MASK_CLEAR;
-    _delay_us(10);
-    PORTD |= MASK_CLEAR;
-    _delay_us(100);
-    for (int i = 0; i < 16; i++) {
-      uint8_t buf = 0;
-      for (int j = 0; j < 8; j++) {
-        buf >>= 1;
-        PORTD &= ~MASK_CLOCK;
-        _delay_us(10);
-        PORTD |= MASK_CLOCK;
-        _delay_us(40);
-        if (!(PIND & MASK_DIN)) {
-          buf |= 0x80;
-        }
+  // Read the keyboard shift register into the memory region pointed
+  // to by state.
+  
+  PORTD &= ~MASK_CLEAR;
+  _delay_us(10);
+  PORTD |= MASK_CLEAR;
+  _delay_us(100);
+  for (int i = 0; i < 16; i++) {
+    uint8_t buf = 0;
+    for (int j = 0; j < 8; j++) {
+      buf >>= 1;
+      PORTD &= ~MASK_CLOCK;
+      _delay_us(10);
+      PORTD |= MASK_CLOCK;
+      _delay_us(40);
+      if (!(PIND & MASK_DIN)) {
+        buf |= 0x80;
       }
-      state[i] = buf;
     }
+    state[i] = buf;
+  }
 }
 
 void
 jump_to_loader(void)
 {
   // Jump to the HalfKay (or any other) boot loader
+
   USBCON = 0;
   asm("jmp 0x3000");
 }
@@ -159,9 +152,11 @@ handle_local_keys(void)
 
   // Evaluate key press.
   switch (keyboard_keys[0]) {
+
   case KEY_B:
     jump_to_loader();
     break;
+
   case KEY_V:
     report_version();
     break;
@@ -171,8 +166,8 @@ handle_local_keys(void)
 void
 send_keys(uint8_t* state)
 {
-  // A change of state has been detected by the main loop, report all
-  // currently pressed keys to the host.
+  // Report all currently pressed keys to the host.  This function
+  // will be called when a change of state has been detected.
   
   uint8_t local = 0;
   uint8_t caps_lock_pressed = 0;
