@@ -17,7 +17,7 @@
 // green GND
 // red   D4   DIN
 // black D5   CLK
-// white D6   CK]
+// white D6   CLR
 
 // The keyboard implements two locking functions, caps lock and mode
 // lock.  Both of these are implemented as switches, not as buttons,
