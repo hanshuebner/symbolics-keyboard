@@ -1,4 +1,28 @@
-/* Symbolics keyboard adapter, based on Teensy keyboard example */
+// -*- C++ -*- (this is really C)
+
+// Symbolics keyboard adapter, based on Teensy keyboard example.
+
+// The Symbolics keyboard acts as a shift register with 128 bits.  The
+// hardware interface consists of a clear line which is used to signal
+// the beginning of a read cycle, a clock line, and a data line.  All
+// signals are active low.  The keyboard changes the data line on the
+// rising edge of the clock.  It should be read near the falling edge
+// of the clock by the host.
+
+// The keyboard needs to be interfaced to the Teensy board as
+// follows. The wire colors specified are those used in the original
+// modular cable supplied with the keyboard:
+//
+// blue  5V
+// green GND
+// red   D4   DIN
+// black D5   CLK
+// white D6   CK]
+
+// The keyboard implements two locking functions, caps lock and mode
+// lock.  Both of these are implemented as switches, not as buttons,
+// so precautions must be made to synchronize their state to the
+// host's caps lock state.
 
 /* Keyboard example for Teensy USB Development Board
  * http://www.pjrc.com/teensy/usb_keyboard.html
@@ -103,6 +127,10 @@ const char revision[] PROGMEM = "$Revision$";
 void
 report_version(void)
 {
+  // Report Subversion revision number.  We only convert the revision
+  // number and do not bother to convert other characters to key
+  // presses.
+
   int i = 0;
   for (;;) {
     uint8_t c = pgm_read_byte(&revision[i++]);
@@ -143,13 +171,19 @@ handle_local_keys(void)
 void
 send_keys(uint8_t* state)
 {
+  // A change of state has been detected by the main loop, report all
+  // currently pressed keys to the host.
+  
   uint8_t local = 0;
   uint8_t caps_lock_pressed = 0;
   const uint8_t* keymap = keymap_normal;
 
  retry:
   // If we detect that we are in f-mode, we need to translate the
-  // pressed keys with the f-mode translation table.
+  // pressed keys with the f-mode translation table.  Detection of
+  // f-mode happens while decoding the shift register.  When the
+  // f-mode key is detected as being pressed, the translation table is
+  // switched and the decoding process is restarted.
   {
     uint8_t key_index = 0;
     uint8_t map_index = 0;
