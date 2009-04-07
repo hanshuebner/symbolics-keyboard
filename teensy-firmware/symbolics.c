@@ -48,6 +48,7 @@
 #define NUM_KEY_RIGHT_GUI   7
 #define NUM_KEY_LOCAL       8
 #define NUM_KEY_F_MODE      9
+#define NUM_KEY_CAPS_LOCK   10
 
 #include "keymap.inc"
 
@@ -120,6 +121,7 @@ void
 send_keys(uint8_t* state)
 {
   uint8_t local = 0;
+  uint8_t caps_lock_pressed = 0;
   const uint8_t* keymap = keymap_normal;
 
  retry:
@@ -171,6 +173,11 @@ send_keys(uint8_t* state)
                 goto retry;
               }
               break;
+
+            case NUM_KEY_CAPS_LOCK:
+              caps_lock_pressed = 1;
+              break;
+
             }
           } else {
             if (key_index < sizeof keyboard_keys) {
@@ -189,6 +196,14 @@ send_keys(uint8_t* state)
 #if !defined(DEBUG)
     usb_keyboard_send();
 #endif
+  }
+
+  {
+    // Process caps lock key.
+    uint8_t prev_caps_lock_pressed = (keyboard_leds & 2) ? 1 : 0;
+    if (caps_lock_pressed ^ prev_caps_lock_pressed) {
+      usb_keyboard_press(KEY_CAPS_LOCK, 0);
+    }
   }
 }
 

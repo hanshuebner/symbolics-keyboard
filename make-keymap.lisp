@@ -262,7 +262,7 @@
     ("KP0"		"KEYPAD_0")
     ("["		"KEY_LEFT_BRACE")
     ("="		"KEY_EQUAL")
-    ("Caps"		"KEY_CAPS_LOCK")
+    ("Caps"		"NUM_KEY_CAPS_LOCK")
     ("ShiftR"		"NUM_KEY_RIGHT_SHIFT")
     ("'"		"KEY_QUOTE")
     ("Return"		"KEY_ENTER")

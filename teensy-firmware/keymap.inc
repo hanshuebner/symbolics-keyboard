@@ -1,7 +1,7 @@
 const uint8_t keymap_normal[128] PROGMEM = {
     0,
     0x80 | NUM_KEY_LOCAL,
-    KEY_CAPS_LOCK,
+    0x80 | NUM_KEY_CAPS_LOCK,
     KEY_F8,
     0x80 | NUM_KEY_LEFT_ALT,
     0x80 | NUM_KEY_RIGHT_CTRL,
@@ -131,7 +131,7 @@ const uint8_t keymap_normal[128] PROGMEM = {
 const uint8_t keymap_f_mode[128] PROGMEM = {
     0,
     0x80 | NUM_KEY_LOCAL,
-    KEY_CAPS_LOCK,
+    0x80 | NUM_KEY_CAPS_LOCK,
     KEY_F8,
     0x80 | NUM_KEY_LEFT_ALT,
     0x80 | NUM_KEY_RIGHT_CTRL,
