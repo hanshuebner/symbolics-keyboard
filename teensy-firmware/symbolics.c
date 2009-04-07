@@ -98,6 +98,25 @@ jump_to_loader(void)
   asm("jmp 0x3000");
 }
 
+const char revision[] PROGMEM = "$Revision$";
+
+void
+report_version(void)
+{
+  int i = 0;
+  for (;;) {
+    uint8_t c = pgm_read_byte(&revision[i++]);
+    if (c == 0) {
+      break;
+    } else if (c >= '0' && c <= '9') {
+      usb_keyboard_press((c == '0')
+                         ? KEY_0
+                         : (KEY_1 + (c - '1')),
+                         0);
+    }
+  }
+}
+
 void
 handle_local_keys(void)
 {
@@ -114,6 +133,10 @@ handle_local_keys(void)
   switch (keyboard_keys[0]) {
   case KEY_B:
     jump_to_loader();
+    break;
+  case KEY_V:
+    report_version();
+    break;
   }
 }
 
@@ -199,7 +222,18 @@ send_keys(uint8_t* state)
   }
 
   {
-    // Process caps lock key.
+    // Process caps lock key.  This key is a switch on the Symbolics
+    // keyboard, so we must make sure that the current switch setting
+    // always matches the caps lock state of the host.
+
+    // If the host set LED 2, it indicates that caps lock has been
+    // pressed.  If the caps lock state reported by the host does not
+    // match the caps lock key state of the Symbolics keyboard, send a
+    // "caps lock" key press and release to the host to make the two
+    // match.  As a result, if caps lock is depressed on another
+    // keyboard connected to the host, it will quickly be cleared
+    // again.
+
     uint8_t prev_caps_lock_pressed = (keyboard_leds & 2) ? 1 : 0;
     if (caps_lock_pressed ^ prev_caps_lock_pressed) {
       usb_keyboard_press(KEY_CAPS_LOCK, 0);
