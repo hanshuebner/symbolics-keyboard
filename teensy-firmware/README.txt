@@ -12,8 +12,8 @@ The keyboard needs to be interfaced to the Teensy board as
 follows. The wire colors specified are those used in the original
 modular cable supplied with the keyboard:
 
-blue  5V
-green GND
+blue  GND
+green 5V
 red   D4   DIN
 black D5   CLK
 white D6   CLR
