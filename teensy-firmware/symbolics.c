@@ -95,7 +95,7 @@ poll_keyboard(uint8_t* state)
     for (int j = 0; j < 8; j++) {
       buf >>= 1;
       PORTD &= ~MASK_CLOCK;
-      _delay_us(10);
+      _delay_us(8);
       PORTD |= MASK_CLOCK;
       _delay_us(40);
       if (!(PIND & MASK_DIN)) {
