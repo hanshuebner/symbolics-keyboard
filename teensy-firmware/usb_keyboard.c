@@ -22,6 +22,7 @@
  */
 
 // Version 1.0: Initial Release
+// Version 1.1: Add support for Teensy 2.0
 
 #define USB_SERIAL_PRIVATE_INCLUDE
 #include "usb_keyboard.h"
@@ -268,10 +269,8 @@ volatile uint8_t keyboard_leds=0;
 // initialize USB
 void usb_init(void)
 {
-	//volatile int dly;
-	//for (dly=0; dly<1000; dly++) ;	// delay before attach
 	HW_CONFIG();
-	USBCON = (1<<USBE) | (1<<FRZCLK);	// enable USB
+	USB_FREEZE();	// enable USB
 	PLL_CONFIG();				// config PLL
         while (!(PLLCSR & (1<<PLOCK))) ;	// wait for PLL lock
         USB_CONFIG();				// start USB clock

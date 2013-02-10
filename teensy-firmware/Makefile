@@ -52,10 +52,12 @@ SRC =	$(TARGET).c \
 
 
 
-# MCU name, Teensy has at90usb162, Teensy++ has at90usb646
+# MCU name, Teensy has at90usb162, Teensy++ has at90usb646,
+# Teensy 2.0 has atmega32u4
 # type "make clean" after changing this, so all files will be rebuilt
-MCU = at90usb162
+#MCU = at90usb162
 #MCU = at90usb646
+MCU = atmega32u4
 
 
 # Processor frequency.
