@@ -57,7 +57,7 @@ SRC =	$(TARGET).c \
 # type "make clean" after changing this, so all files will be rebuilt
 #MCU = at90usb162
 #MCU = at90usb646
-MCU = atmega32u4
+#MCU = atmega32u4
 
 
 # Processor frequency.
@@ -389,11 +389,16 @@ ALL_CPPFLAGS = -mmcu=$(MCU) -I. -x c++ $(CPPFLAGS) $(GENDEPFLAGS)
 ALL_ASFLAGS = -mmcu=$(MCU) -I. -x assembler-with-cpp $(ASFLAGS)
 
 
-
-
+all:
+	make clean
+	make firmware MCU=at90usb162
+	mv symbolics.hex symbolics-teensy1.hex
+	make clean
+	make firmware MCU=atmega32u4
+	mv symbolics.hex symbolics-teensy2.hex
 
 # Default target.
-all: begin gccversion sizebefore build sizeafter end
+firmware: begin gccversion sizebefore build sizeafter end
 
 # Change the build target to build a HEX file or a library.
 build: elf hex eep lss sym

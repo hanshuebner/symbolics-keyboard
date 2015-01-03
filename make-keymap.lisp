@@ -83,7 +83,8 @@
     ("SymbolL"		"KP8")
     ("|"		"KP-")
     (":"		"KP*")
-    ("CapsLock"		"Caps"))
+    ("CapsLock"		"Caps")
+    ("Local"            "WindowsL"))
   "Mappings for keys.  By default, Symbolics keys which have the same
   name (keycap label) as a PS/2 key are mapped to that corresponding
   key.  Before the default mapping is considered, this list of lists

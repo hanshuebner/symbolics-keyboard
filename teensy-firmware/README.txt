@@ -1,4 +1,24 @@
-Symbolics keyboard adapter, based on Teensy keyboard example.
+Symbolics keyboard adapter, based on Teensy keyboard example
+============================================================
+
+This directory contains a Firmware for the Teensy single board
+computer that allows interfacing a Symbolics keyboard to an USB host.
+It has been used with both old-style and slim keyboards.
+
+The firmware can be build using a standard gcc-avr tool chain using
+the "make" command, which will build both the Teensy 1.0 and Teensy
+2.0 hex files.  Make sure that you use the correct hex file for your
+hardware.  You can determine what hardware you have when you open the
+"Verbose Info" Window in the Teensy loader GUI (under Help in the
+menu).
+
+To update the firmware without opening the keyboard, you can use the
+boot loader command key.  This used to be Local+B in older releases of
+the firmware, but it is now Local+Abort because Local is mapped to the
+Command/Windows key so that using a Mac with the keyboard is easier.
+
+Technical information:
+----------------------
 
 The Symbolics keyboard acts as a shift register with 128 bits.  Each
 key is represented by one bit in the shift register.  The hardware
@@ -35,13 +55,10 @@ Symbolics layout and a variant that assigns the modifier keys on the
 right side of the space bar to be cursor keys.  This mode is called
 f_mode.
 
-The "Local" key is used as a modifier key to trigger functions in the
-converter firmware.  The following functions are implemented:
+The "Local" key is mapped as "Command" or "Windows" key.
 
-Local-B boots the AVR into the boot loader so that it can be
+Local+Abort boots the AVR into the boot loader so that it can be
 reprogrammed through USB by the host.
-
-Local-V sends the Subversion revision number of this file to the host.
 
 Mapping of the symbolics key number to an USB key number is done
 through the mapping table defined in the file keymap.inc.  There are

@@ -95,7 +95,7 @@ poll_keyboard(uint8_t* state)
     for (int j = 0; j < 8; j++) {
       buf >>= 1;
       PORTD &= ~MASK_CLOCK;
-      _delay_us(8);
+      _delay_us(7);
       PORTD |= MASK_CLOCK;
       _delay_us(40);
       if (!(PIND & MASK_DIN)) {
@@ -113,54 +113,6 @@ jump_to_loader(void)
 
   USBCON = 0;
   asm("jmp 0x3000");
-}
-
-const char revision[] PROGMEM = "$Revision$";
-
-void
-report_version(void)
-{
-  // Report Subversion revision number.  We only convert the revision
-  // number and do not bother to convert other characters to key
-  // presses.
-
-  int i = 0;
-  for (;;) {
-    uint8_t c = pgm_read_byte(&revision[i++]);
-    if (c == 0) {
-      break;
-    } else if (c >= '0' && c <= '9') {
-      usb_keyboard_press((c == '0')
-                         ? KEY_0
-                         : (KEY_1 + (c - '1')),
-                         0);
-    }
-  }
-}
-
-void
-handle_local_keys(void)
-{
-  // Local processing.  LOCAL acts as a modifier key that can be used to execute in the keyboard controller.
-
-  // If more than one key is pressed, do nothing
-  for (int i = 1; i < sizeof keyboard_keys; i++) {
-    if (keyboard_keys[i]) {
-      return;
-    }
-  }
-
-  // Evaluate key press.
-  switch (keyboard_keys[0]) {
-
-  case KEY_B:
-    jump_to_loader();
-    break;
-
-  case KEY_V:
-    report_version();
-    break;
-  }
 }
 
 void
@@ -187,8 +139,8 @@ send_keys(uint8_t* state)
 
     for (int i = 0; i < 16; i++) {
       uint8_t buf = state[i];
-      for (int j = 0; j < 8; j++) {
-        uint8_t mapped = pgm_read_byte(&keymap[map_index++]);
+      for (int j = 0; j < 8; j++, map_index++) {
+        uint8_t mapped = pgm_read_byte(&keymap[map_index]);
         uint8_t pressed = (buf & 1);
 #if defined(DEBUG)
         if (pressed) {
@@ -199,6 +151,16 @@ send_keys(uint8_t* state)
           print("\n");
         }
 #endif
+        // Handle firmware update key combination Local+Abort
+
+        if (pressed) {
+          if (map_index == 0x01) {
+            local = 1;                                      // Local key is pressed
+          } else if (map_index == 0x1e && local) {
+            jump_to_loader();                               // Abort key is pressed
+          }
+        }            
+
         if (pressed && mapped) {
           if (mapped & 0x80) {
             int num = mapped & 0x7F;
@@ -213,10 +175,6 @@ send_keys(uint8_t* state)
             case NUM_KEY_RIGHT_ALT:
             case NUM_KEY_RIGHT_GUI:
               keyboard_modifier_keys |= 1 << num;
-              break;
-
-            case NUM_KEY_LOCAL:
-              local = 1;
               break;
 
             case NUM_KEY_F_MODE:
@@ -242,13 +200,9 @@ send_keys(uint8_t* state)
     }
   }
   
-  if (local) {
-    handle_local_keys();
-  } else {
 #if !defined(DEBUG)
-    usb_keyboard_send();
+  usb_keyboard_send();
 #endif
-  }
 
   {
     // Process caps lock key.  This key is a switch on the Symbolics
